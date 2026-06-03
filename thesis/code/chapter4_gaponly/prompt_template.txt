@@ -1,0 +1,7 @@
+You are given a heuristic scoring function `incumbent` and four instances of online bin packing on which the incumbent's behavior is shown by `incumbent_bins_used`. For each instance, a `gap_bins` field reports the signed difference between the incumbent's bin count and the bin count achieved by a fixed reference scoring function not shown here (positive `gap_bins` means the incumbent uses more bins than the reference; negative means fewer). Propose a revised scoring function whose behavior improves performance — that is, reduces the bin count — on these instances and on the broader instance distribution they represent. Return only the revised function.
+
+=== INCUMBENT HEURISTIC ===
+{incumbent_code}
+
+=== INSTANCES ===
+{counterexamples_block}

@@ -1,0 +1,7 @@
+You are given a heuristic scoring function `incumbent` and four instances of online bin packing on which the incumbent's behavior is shown by `incumbent_bins_used`. Propose a revised scoring function whose behavior improves performance — that is, uses fewer bins — on these instances and on the broader instance distribution they represent. Return only the revised function.
+
+=== INCUMBENT HEURISTIC ===
+{incumbent_code}
+
+=== INSTANCES ===
+{counterexamples_block}

@@ -1,0 +1,245 @@
+{
+  "design_doc_section": "\u00a718.7 G",
+  "per_cell": {
+    "CH7-01": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 5,
+        "rejected_regression": 10
+      },
+      "cell": {
+        "cell_id": "CH7-01",
+        "k": 1,
+        "level": 1,
+        "strategy": "stratified_representative"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-02": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 1,
+        "rejected_argmax_equivalent": 4,
+        "rejected_regression": 10
+      },
+      "cell": {
+        "cell_id": "CH7-02",
+        "k": 2,
+        "level": 1,
+        "strategy": "stratified_representative"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-03": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 4,
+        "rejected_argmax_equivalent": 5,
+        "rejected_regression": 6
+      },
+      "cell": {
+        "cell_id": "CH7-03",
+        "k": 4,
+        "level": 1,
+        "strategy": "stratified_representative"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-04": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 4,
+        "rejected_argmax_equivalent": 1,
+        "rejected_regression": 10
+      },
+      "cell": {
+        "cell_id": "CH7-04",
+        "k": 8,
+        "level": 1,
+        "strategy": "stratified_representative"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-05": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 1,
+        "rejected_argmax_equivalent": 4,
+        "rejected_regression": 10
+      },
+      "cell": {
+        "cell_id": "CH7-05",
+        "k": 1,
+        "level": 1,
+        "strategy": "worst_only_at_k1"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-06": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 3,
+        "rejected_argmax_equivalent": 3,
+        "rejected_regression": 9
+      },
+      "cell": {
+        "cell_id": "CH7-06",
+        "k": 2,
+        "level": 1,
+        "strategy": "worst_plus_best"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-07": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 4,
+        "rejected_argmax_equivalent": 3,
+        "rejected_regression": 8
+      },
+      "cell": {
+        "cell_id": "CH7-07",
+        "k": 4,
+        "level": 1,
+        "strategy": "worst_plus_best"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-08": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 4,
+        "rejected_argmax_equivalent": 4,
+        "rejected_regression": 7
+      },
+      "cell": {
+        "cell_id": "CH7-08",
+        "k": 8,
+        "level": 1,
+        "strategy": "worst_plus_best"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-09": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 5,
+        "rejected_argmax_equivalent": 1,
+        "rejected_regression": 9
+      },
+      "cell": {
+        "cell_id": "CH7-09",
+        "k": 1,
+        "level": 2,
+        "strategy": "stratified_representative"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-10": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 3,
+        "rejected_regression": 12
+      },
+      "cell": {
+        "cell_id": "CH7-10",
+        "k": 2,
+        "level": 2,
+        "strategy": "stratified_representative"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-11": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 7,
+        "rejected_regression": 8
+      },
+      "cell": {
+        "cell_id": "CH7-11",
+        "k": 4,
+        "level": 2,
+        "strategy": "stratified_representative"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-12": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 3,
+        "rejected_regression": 12
+      },
+      "cell": {
+        "cell_id": "CH7-12",
+        "k": 1,
+        "level": 2,
+        "strategy": "worst_only_at_k1"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-13": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 4,
+        "rejected_argmax_equivalent": 3,
+        "rejected_regression": 8
+      },
+      "cell": {
+        "cell_id": "CH7-13",
+        "k": 2,
+        "level": 2,
+        "strategy": "worst_plus_best"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "CH7-14": {
+      "acceptance_reason_counts": {
+        "accepted_improvement": 5,
+        "rejected_regression": 10
+      },
+      "cell": {
+        "cell_id": "CH7-14",
+        "k": 4,
+        "level": 2,
+        "strategy": "worst_plus_best"
+      },
+      "n_steps_complete": 15,
+      "sanitize_status_counts": {
+        "ok": 15
+      }
+    },
+    "_grand_totals": {
+      "acceptance:accepted_improvement": 53,
+      "acceptance:rejected_argmax_equivalent": 28,
+      "acceptance:rejected_regression": 129,
+      "ok": 210
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,80 @@
+{
+  "launched_at": "2026-05-23T00:25:00Z",
+  "authorized_by_smoke_commit": "02c3149",
+  "design_doc": "thesis/writing/chapter4_comparative_decomposition_design.md",
+  "expected_total_llm_calls": 180,
+  "expected_wall_clock_estimate_hours": "~2.5-3 (concurrent, based on smoke timing ~147s/call)",
+  "transport": {
+    "provider": "vertex",
+    "model": "gemini-2.5-pro",
+    "reasoning_effort": "medium",
+    "thinking_budget_mapping": 10240,
+    "max_output_tokens": 32768,
+    "temperature": 1.0,
+    "decisions_log_reference": "2026-05-05 — Chapter 7 transport authorized: Vertex AI for primary batch and forward"
+  },
+  "batches": [
+    {
+      "name": "E1_chapter4_noref_primary_batch",
+      "design_doc_section": "4.5.1",
+      "background_job_id": "b0chai9gu",
+      "log_file": "thesis/results/_logs/chapter4_noref_20260523T002500Z.log",
+      "output_dir": "thesis/results/chapter4_noref_primary_batch_gemini/",
+      "progress_file": "thesis/results/chapter4_noref_primary_batch_gemini/progress.json",
+      "expected_calls": 60,
+      "cell": "stratified_representative @ L1 @ k=4 (no-reference)",
+      "seed_namespace": "ch4noref",
+      "matrix": "20 sets x 3 seeds per set",
+      "started_at": "2026-05-23T00:25:07Z"
+    },
+    {
+      "name": "E2_chapter4_gaponly_primary_batch",
+      "design_doc_section": "4.5.2",
+      "background_job_id": "bpncvjyfw",
+      "log_file": "thesis/results/_logs/chapter4_gaponly_20260523T002500Z.log",
+      "output_dir": "thesis/results/chapter4_gaponly_primary_batch_gemini/",
+      "progress_file": "thesis/results/chapter4_gaponly_primary_batch_gemini/progress.json",
+      "expected_calls": 60,
+      "cell": "stratified_representative @ L1 @ k=4 (gap-only)",
+      "seed_namespace": "ch4gaponly",
+      "matrix": "20 sets x 3 seeds per set",
+      "started_at": "2026-05-23T00:25:13Z"
+    },
+    {
+      "name": "E5_chapter4_extra_trajectories",
+      "design_doc_section": "thesis/writing/chapter4_extra_trajectories_design.md",
+      "background_job_id": "bvcf6v4hk",
+      "log_file": "thesis/results/_logs/chapter4_extra_20260523T002500Z.log",
+      "output_dirs": [
+        "thesis/results/chapter5_validation_batch_gemini/",
+        "thesis/results/chapter7_validation_batch_gemini/"
+      ],
+      "expected_calls": 60,
+      "matrix": "4 cells x 3 trajectories x 5 steps",
+      "trajectory_indices": [3, 4, 5],
+      "cells": [
+        {"label": "stratified_representative_L1_k4", "origin": "ch5", "strategy": "stratified_representative", "level": 1, "k": 4},
+        {"label": "worst_plus_best_L1_k4", "origin": "ch5", "strategy": "worst_plus_best", "level": 1, "k": 4},
+        {"label": "stratified_representative_L2_k1", "origin": "ch7", "cell_id": "CH7-09", "strategy": "stratified_representative", "level": 2, "k": 1},
+        {"label": "worst_only_at_k1_L2_k1", "origin": "ch7", "cell_id": "CH7-12", "strategy": "worst_only_at_k1", "level": 2, "k": 1}
+      ],
+      "seed_namespace_label": "ch4extra",
+      "seed_namespace_note": "Design doc §4.2 names 'ch4extra:' as the logical namespace. The actual seeds are derived under chapter-5's 'ch5:traj:' and chapter-7's 'ch7:traj:' namespaces with fresh trajectory_index coordinates {3, 4, 5}. The 'ch4extra:' label is recorded on each per-step record as the conceptual namespace for this extension family; the underlying seed prefix is the chapter-5/7 namespace. Coordinates 3, 4, 5 are unused by the original n=3 trajectories so no collision."
+    }
+  ],
+  "resume_policy": "Each runner is resumable via per-call/per-step filename existence checks. Interrupted batches restart from the lowest missing record. ch4extra trajectories restore incumbent state from prior accepted-step records.",
+  "pre_flight_checks_completed": {
+    "vertex_token_resolves": true,
+    "output_dirs_empty_or_resumable": true,
+    "ch4extra_namespace_no_collision": true,
+    "expected_e5_existing_records_per_cell": "15 (n=3 trajectories x 5 steps; left untouched)",
+    "expected_e5_new_records_per_cell": "15 (n=3 new trajectories x 5 steps)"
+  },
+  "next_steps_after_completion": [
+    "Run verify_chapter4_decomposition.py (analysis of E1 + E2 against chapter-5 'full' cell)",
+    "Run W-E5 n=6 analysis (consolidate original + extension trajectories)",
+    "Update 02_current_state.md to mark Phase B done",
+    "Add findings-log entries for the new empirical results",
+    "Begin Phase C prose drafting"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "n3_baseline": {
+    "mean_paired_diff": 5.13,
+    "ci_lower": 4.17,
+    "ci_upper": 6.93,
+    "source": "thesis_main.md Table 4.13 row at line 1090"
+  },
+  "n6_extension": {
+    "mean_paired_diff": 4.7,
+    "ci_lower": 3.7111,
+    "ci_upper": 5.8444,
+    "n_pairs": 6,
+    "bootstrap_seed": 20260523,
+    "bootstrap_resamples": 10000,
+    "strat_L2_k1_trajectory_values_n6": [
+      11.7333,
+      8.9,
+      4.3,
+      6.9667,
+      6.5333,
+      5.8
+    ],
+    "wo1_L2_k1_trajectory_values_n6": [
+      4.8,
+      4.7333,
+      0.0,
+      2.9667,
+      0.5667,
+      2.9667
+    ],
+    "paired_differences": [
+      6.9333,
+      4.1667,
+      4.3,
+      4.0,
+      5.9667,
+      2.8333
+    ]
+  },
+  "ci_excludes_zero_at_n6": true,
+  "direction_preserved_n3_to_n6": true
+}

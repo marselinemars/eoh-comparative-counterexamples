@@ -1,0 +1,14 @@
+[
+     {
+          "algorithm": "This algorithm scores bins using a non-linear function that maximizes the squared fill ratio of the item in the bin while penalizing the resulting empty space relative to the item's size to find the tightest fit.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    fill_ratio_term = (item_float / bins) ** 2\n    waste_penalty_term = (bins - item_float) / (item_float + epsilon)\n    scores = fill_ratio_term - 0.5 * waste_penalty_term\n    return scores\n",
+          "objective": 0.03984,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The scoring function identifies the optimal bin by maximizing a utility ratio, where the numerator logarithmically favors larger leftover spaces and the denominator favors smaller, more utilized bins.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    leftover_plus_one = bins - item + 1.0\n    scores = np.log(leftover_plus_one) / bins\n    return scores\n",
+          "objective": 0.13995,
+          "other_inf": null
+     }
+]

@@ -1,0 +1,47 @@
+{
+  "catastrophe_rate_comparison": {
+    "stratified_representative@L1": {
+      "ch6_catastrophe_rate_at_-50": 0.183,
+      "ch7_anchor_cell": "CH7-03",
+      "ch7_catastrophe_rate_at_-50": 0.11666666666666667,
+      "delta_pp": -6.633333333333333
+    },
+    "stratified_representative@L2": {
+      "ch6_catastrophe_rate_at_-50": 0.083,
+      "ch7_anchor_cell": "CH7-11",
+      "ch7_catastrophe_rate_at_-50": 0.06896551724137931,
+      "delta_pp": -1.4034482758620694
+    },
+    "worst_plus_best@L1": {
+      "ch6_catastrophe_rate_at_-50": 0.1,
+      "ch7_anchor_cell": "CH7-07",
+      "ch7_catastrophe_rate_at_-50": 0.13333333333333333,
+      "delta_pp": 3.3333333333333326
+    },
+    "worst_plus_best@L2": {
+      "ch6_catastrophe_rate_at_-50": 0.2,
+      "ch7_anchor_cell": "CH7-14",
+      "ch7_catastrophe_rate_at_-50": 0.13793103448275862,
+      "delta_pp": -6.206896551724139
+    }
+  },
+  "ch6_interaction_ci_delta_gate": [
+    8.53,
+    158.66
+  ],
+  "ch6_interaction_ci_delta_step": [
+    8.94,
+    155.04
+  ],
+  "ch7_interaction_ci_delta_gate": [
+    -10.281556992337123,
+    121.4079487547892
+  ],
+  "ch7_interaction_ci_delta_step": [
+    -11.348812739463622,
+    120.04012883141762
+  ],
+  "criterion": "\u00a77.3: reproduces iff same-direction AND CI-overlap",
+  "verdict_delta_gate": "does_not_reproduce",
+  "verdict_delta_step": "does_not_reproduce"
+}

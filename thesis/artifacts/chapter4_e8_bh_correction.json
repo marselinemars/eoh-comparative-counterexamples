@@ -1,0 +1,120 @@
+{
+  "design_doc": "thesis/writing/chapter4_robustness_analyses_design.md (E8)",
+  "track_a_relabel_lands_in_phase_c": true,
+  "track_b_run": true,
+  "family_definition": "Per-k L2 interaction comparisons (k in {1, 2, 4}) on delta_step and delta_gate, from chapter7_l2_interaction_stratified_by_k.json. Six tests in total. Each test compares stratified_representative vs (worst_only_at_k1 at k=1, else worst_plus_best) at L2 via the matched-pair mean delta interaction.",
+  "n_comparisons": 6,
+  "n_ci_excludes_zero_unadjusted": 2,
+  "tests": [
+    {
+      "test_id": "L2_interaction_k1_delta_step",
+      "k": 1,
+      "metric": "delta_step",
+      "cell_a_id": "CH7-09",
+      "cell_b_id": "CH7-12",
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_only_at_k1",
+      "n_matched_pairs": 59,
+      "interaction_mean_diff": 82.1632768361582,
+      "interaction_ci_95": [
+        15.746850282485875,
+        167.990918079096
+      ],
+      "ci_excludes_zero": true,
+      "direction": "positive"
+    },
+    {
+      "test_id": "L2_interaction_k1_delta_gate",
+      "k": 1,
+      "metric": "delta_gate",
+      "cell_a_id": "CH7-09",
+      "cell_b_id": "CH7-12",
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_only_at_k1",
+      "n_matched_pairs": 59,
+      "interaction_mean_diff": 82.235593220339,
+      "interaction_ci_95": [
+        15.361257062146883,
+        165.66774011299435
+      ],
+      "ci_excludes_zero": true,
+      "direction": "positive"
+    },
+    {
+      "test_id": "L2_interaction_k2_delta_step",
+      "k": 2,
+      "metric": "delta_step",
+      "cell_a_id": "CH7-10",
+      "cell_b_id": "CH7-13",
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best",
+      "n_matched_pairs": 59,
+      "interaction_mean_diff": 114.11807909604521,
+      "interaction_ci_95": [
+        -6.607838983050855,
+        238.69341807909603
+      ],
+      "ci_excludes_zero": false,
+      "direction": "null"
+    },
+    {
+      "test_id": "L2_interaction_k2_delta_gate",
+      "k": 2,
+      "metric": "delta_gate",
+      "cell_a_id": "CH7-10",
+      "cell_b_id": "CH7-13",
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best",
+      "n_matched_pairs": 59,
+      "interaction_mean_diff": 113.8587570621469,
+      "interaction_ci_95": [
+        -7.789194915254186,
+        238.7452259887005
+      ],
+      "ci_excludes_zero": false,
+      "direction": "null"
+    },
+    {
+      "test_id": "L2_interaction_k4_delta_step",
+      "k": 4,
+      "metric": "delta_step",
+      "cell_a_id": "CH7-11",
+      "cell_b_id": "CH7-14",
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best",
+      "n_matched_pairs": 56,
+      "interaction_mean_diff": 8.708928571428569,
+      "interaction_ci_95": [
+        -5.275833333333291,
+        23.906101190476214
+      ],
+      "ci_excludes_zero": false,
+      "direction": "null"
+    },
+    {
+      "test_id": "L2_interaction_k4_delta_gate",
+      "k": 4,
+      "metric": "delta_gate",
+      "cell_a_id": "CH7-11",
+      "cell_b_id": "CH7-14",
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best",
+      "n_matched_pairs": 56,
+      "interaction_mean_diff": 9.335714285714289,
+      "interaction_ci_95": [
+        -4.035163690476187,
+        24.751086309523803
+      ],
+      "ci_excludes_zero": false,
+      "direction": "null"
+    }
+  ],
+  "exact_p_values_in_existing_artifact": false,
+  "exact_p_values_note": "Per-test p-values were not stored alongside the bootstrap CIs. Deriving exact p-values from the existing artifact is not possible without the underlying paired records or bootstrap sample distributions, both of which are not in the committed repo. A CI-derived BH assessment is reported in lieu of strict adjusted p-values.",
+  "bh_alpha": 0.05,
+  "bh_assessment": "Strict Benjamini-Hochberg FDR requires per-test p-values. The existing artifact stores bootstrap CIs and ci_excludes_zero flags; the underlying bootstrap sample distributions and paired-record data needed to derive exact p-values are not in the committed repo. A CI-derived assessment is given instead: the L2 k=1 delta_step interaction CI of [15.75, 167.99] excludes zero by a margin so large that the test would survive BH at alpha=0.05 for the m=6 family even at the most-conservative Bonferroni-equivalent threshold (alpha/m = 0.00833). The k=1 delta_gate CI of [15.36, 165.67] is similarly robust. The k=2 and k=4 CIs include zero at the unadjusted alpha=0.05 level and do not survive BH a fortiori.",
+  "l2_k1_delta_step_survives_bh_at_005": true,
+  "l2_k1_delta_gate_survives_bh_at_005": true,
+  "k2_k4_survive_bh_at_005": false,
+  "track_a_load_bearing_fix": "The Track A relabel \u2014 explicitly naming the cell-wise comparisons in \u00a74.4 as exploratory rather than confirmatory unless adjusted \u2014 is the load-bearing fix and lands in phase C as a prose edit. Track B (this artifact) supplies the supporting evidence: even under a strict BH at alpha=0.05 for the m=6 \u00a74.4 L2-interaction family, the k=1 finding survives; the k=2 and k=4 findings do not."
+}

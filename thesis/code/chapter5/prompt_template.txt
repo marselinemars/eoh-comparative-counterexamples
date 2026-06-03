@@ -1,0 +1,66 @@
+You are improving a bin-packing heuristic for the online bin-packing
+problem. The incumbent heuristic below is strong but imperfect.
+Propose an improved version of the same function.
+
+You are also shown a second, reference heuristic. The reference is an
+alternative scoring rule that behaves differently from the incumbent
+on some inputs; it is the source of the alternative bin counts shown
+in each counterexample. The reference is provided as context for
+contrast, not as a solution to copy — it is not necessarily better
+overall, and your task is not to imitate it.
+
+Requirements:
+  - The output must be a complete Python function named `score` with
+    the signature `score(item, bins) -> np.ndarray`.
+  - `item` is a scalar item size; `bins` is a numpy array of
+    remaining bin capacities for open bins.
+  - The function must return a numpy array of the same length as
+    `bins`, interpreted as priorities. The harness places the item
+    in the bin with the highest score.
+  - You may restructure the function, add or remove parameters,
+    introduce new terms, or change the overall approach. Free-form
+    rewriting is acceptable.
+
+=== INCUMBENT HEURISTIC ===
+{incumbent_code}
+
+=== REFERENCE HEURISTIC ===
+{reference_code}
+
+=== COUNTEREXAMPLES ===
+Below are {k} instances on which the incumbent and the reference
+heuristic produced different results. For each instance you are
+given the number of items and bin capacity, the bin counts used by
+each heuristic (positive `diff` means the incumbent used fewer
+bins), a statistical summary of the item-size distribution (mean,
+std, min, max, quartiles, p10/p90, and a 10-bucket histogram), and
+a purposeful sample of items (largest 5, smallest 5, near-median 5,
+and a deterministic random 5). Use this instance-level evidence to
+reason about where the incumbent loses or wins and what localized
+change would help.
+
+{counterexamples_block}
+
+=== YOUR TASK ===
+Produce TWO sections in this exact order. Each section label must
+appear on its own line, exactly as shown, with no additional
+formatting (no markdown, no bullets, no bold).
+STEP_BY_STEP_REASONING
+Write a numbered reasoning trace. Address these four points in
+order, one per numbered step:
+
+What specific pattern do you observe in the counterexamples?
+Refer to the instance summaries and the incumbent vs reference
+bin counts to identify what kind of inputs the incumbent handles
+differently from the reference.
+Based on that pattern, what aspect of the incumbent's logic is
+likely responsible for the difference?
+What specific modification to the incumbent do you propose?
+Why do you expect this modification to help on instances like
+those shown?
+
+Keep the full reasoning under 400 words.
+CODE
+Provide the complete Python source for the new score function.
+Include necessary imports. No markdown fences, no commentary before
+or after the code.

@@ -1,0 +1,6 @@
+{
+     "algorithm": "This algorithm computes a score by arithmetically combining an exponential best-fit potential and a harmonic divisibility potential using sigmoid-based weights derived from the item's relative size.",
+     "code": "import numpy as np\n\ndef score(item, bins):\n    gamma = 5.0\n    delta = 8.0\n    kappa = 10.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    \n    rem_space = bins - item_float\n    potential_bf = np.exp(-gamma * np.power(rem_space, 2))\n    \n    divisibility_ratio = bins / (item_float + epsilon)\n    cosine_term = (np.cos(2.0 * np.pi * divisibility_ratio) + 1.0) / 2.0\n    potential_hd = np.power(cosine_term, delta)\n    \n    relative_fill = item_float / (bins + epsilon)\n    weight_bf = 1.0 / (1.0 + np.exp(-kappa * (relative_fill - 0.5)))\n    weight_hd = 1.0 - weight_bf\n    \n    scores = weight_bf * potential_bf + weight_hd * potential_hd\n    \n    return scores\n",
+     "objective": 0.02244,
+     "other_inf": null
+}

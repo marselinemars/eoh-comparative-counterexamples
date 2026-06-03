@@ -1,0 +1,57 @@
+{
+  "catastrophe_value": -2220.5,
+  "catastrophe_source_cell": "E1",
+  "main_analysis": {
+    "full_vs_no_reference": {
+      "n_pairs": 56,
+      "n_failures_substituted": 0,
+      "mean": 296.9375,
+      "ci_low": 148.62947916666664,
+      "ci_high": 464.7562648809523,
+      "excludes_zero": true
+    },
+    "full_vs_gap_only": {
+      "n_pairs": 59,
+      "n_failures_substituted": 0,
+      "mean": 207.9468926553672,
+      "ci_low": 83.04264124293786,
+      "ci_high": 350.33961864406774,
+      "excludes_zero": true
+    },
+    "gap_only_vs_no_reference": {
+      "n_pairs": 56,
+      "n_failures_substituted": 0,
+      "mean": 78.63214285714288,
+      "ci_low": -113.3257291666666,
+      "ci_high": 276.8116071428571,
+      "excludes_zero": false
+    }
+  },
+  "sensitivity_analysis": {
+    "full_vs_no_reference": {
+      "n_pairs": 60,
+      "n_failures_substituted": 4,
+      "mean": 425.015,
+      "ci_low": 244.42481944444444,
+      "ci_high": 625.2908055555556,
+      "excludes_zero": true
+    },
+    "full_vs_gap_only": {
+      "n_pairs": 60,
+      "n_failures_substituted": 1,
+      "mean": 241.5694444444444,
+      "ci_low": 107.07240277777777,
+      "ci_high": 397.306611111111,
+      "excludes_zero": true
+    },
+    "gap_only_vs_no_reference": {
+      "n_pairs": 60,
+      "n_failures_substituted": 4,
+      "mean": 183.4455555555556,
+      "ci_low": -28.1198333333333,
+      "ci_high": 404.9205416666667,
+      "excludes_zero": false
+    }
+  },
+  "ordering_preserved": true
+}

@@ -1,0 +1,32 @@
+**/__pycache__
+**/build/
+*.egg-info/
+*.egg
+*.pyc
+.DS_Store
+.vscode/
+output.log
+
+# Thesis workspace
+thesis/results/*
+!thesis/results/.gitkeep
+!thesis/results/observations/
+thesis/artifacts/score_cache*.json
+thesis/artifacts/*.pkl
+
+# Local environment
+.venv/
+.env
+.claude/
+.pytest_cache/
+.pytest_tmp/
+.pytest_tmp_codex*/
+pytest-cache-files-*/
+.thesis_extract/
+
+# LLM logs — never commit (API key exposure risk)
+llm_logs/
+
+# Pre-thesis refinement local artifacts
+examples/bp_online/refinement/one_off_results/
+exa

@@ -1,0 +1,188 @@
+{
+  "cell_label": "worst_plus_best_L1_k4",
+  "strategy": "worst_plus_best",
+  "level": 1,
+  "k": 4,
+  "n3_finals_original": [
+    6.300000000000182,
+    3.6000000000001364,
+    3.0333333333335304
+  ],
+  "n3_stats_original": {
+    "n": 3,
+    "values": [
+      6.300000000000182,
+      3.6000000000001364,
+      3.0333333333335304
+    ],
+    "mean": 4.311111111111283,
+    "median": 3.6000000000001364,
+    "std": 1.7455764197069832,
+    "loo_means": [
+      3.3166666666668334,
+      4.666666666666856,
+      4.950000000000159
+    ],
+    "loo_range": [
+      3.3166666666668334,
+      4.950000000000159
+    ],
+    "mean_ci_95": [
+      3.0333333333335304,
+      6.300000000000182
+    ]
+  },
+  "n3_finals_extension": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n3_extension_debug": [
+    {
+      "trajectory_index": 3,
+      "cumulative": 0.0,
+      "per_step": [
+        {
+          "step": 1,
+          "accepted": false,
+          "reason": "rejected_argmax_equivalent",
+          "delta_step_local": 0.0
+        },
+        {
+          "step": 2,
+          "accepted": false,
+          "reason": "rejected_argmax_equivalent",
+          "delta_step_local": 0.0
+        },
+        {
+          "step": 3,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -7.7333333333333485
+        },
+        {
+          "step": 4,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -14.399999999999864
+        },
+        {
+          "step": 5,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -11.46666666666647
+        }
+      ]
+    },
+    {
+      "trajectory_index": 4,
+      "cumulative": 0.0,
+      "per_step": [
+        {
+          "step": 1,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -7.6666666666667425
+        },
+        {
+          "step": 2,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -35.46666666666647
+        },
+        {
+          "step": 3,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -4.7666666666666515
+        },
+        {
+          "step": 4,
+          "accepted": false,
+          "reason": "rejected_argmax_equivalent",
+          "delta_step_local": 0.0
+        },
+        {
+          "step": 5,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -35.63333333333344
+        }
+      ]
+    },
+    {
+      "trajectory_index": 5,
+      "cumulative": 0.0,
+      "per_step": [
+        {
+          "step": 1,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -2.166666666666515
+        },
+        {
+          "step": 2,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -16.96666666666647
+        },
+        {
+          "step": 3,
+          "accepted": false,
+          "reason": "rejected_argmax_equivalent",
+          "delta_step_local": 0.0
+        },
+        {
+          "step": 4,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -157.23333333333335
+        },
+        {
+          "step": 5,
+          "accepted": false,
+          "reason": "rejected_regression",
+          "delta_step_local": -2.166666666666515
+        }
+      ]
+    }
+  ],
+  "n6_finals": [
+    6.300000000000182,
+    3.6000000000001364,
+    3.0333333333335304,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n6_stats": {
+    "n": 6,
+    "values": [
+      6.300000000000182,
+      3.6000000000001364,
+      3.0333333333335304,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean": 2.1555555555556416,
+    "median": 1.5166666666667652,
+    "std": 2.6066297240918144,
+    "loo_means": [
+      1.3266666666667333,
+      1.8666666666667424,
+      1.9800000000000637,
+      2.58666666666677,
+      2.58666666666677,
+      2.58666666666677
+    ],
+    "loo_range": [
+      1.3266666666667333,
+      2.58666666666677
+    ],
+    "mean_ci_95": [
+      0.5055555555555884,
+      4.200416666666783
+    ]
+  }
+}

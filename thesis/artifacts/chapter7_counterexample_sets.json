@@ -1,0 +1,3645 @@
+{
+  "chapter": "chapter7",
+  "design_doc_sections": [
+    "chapter7_design.md \u00a73.8",
+    "chapter7_design.md \u00a74.1",
+    "chapter7_design.md \u00a75.1",
+    "chapter7_design.md \u00a75.2"
+  ],
+  "deterministic_sets": [
+    {
+      "cell_label": "worst_only_at_k1@k=1",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "deterministic",
+      "k": 1,
+      "set_index": 0,
+      "set_seed": null,
+      "strategy": "worst_only_at_k1"
+    },
+    {
+      "cell_label": "worst_plus_best@k=2",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "deterministic",
+      "k": 2,
+      "set_index": 0,
+      "set_seed": null,
+      "strategy": "worst_plus_best"
+    },
+    {
+      "cell_label": "worst_plus_best@k=4",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "deterministic",
+      "k": 4,
+      "set_index": 0,
+      "set_seed": null,
+      "strategy": "worst_plus_best"
+    },
+    {
+      "cell_label": "worst_plus_best@k=8",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -20,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_24",
+            "reference_bins_used": 2047,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2029,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_14",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "deterministic",
+      "k": 8,
+      "set_index": 0,
+      "set_seed": null,
+      "strategy": "worst_plus_best"
+    }
+  ],
+  "expected_pool_hash_prefix12": "f89434911301",
+  "level_sharing": {
+    "interpretation": "L1 and L2 cells with the same (strategy, k, set_index) share the same CounterexampleSet \u2014 selection is level-agnostic; only prompt rendering differs",
+    "rationale": "\u00a75.2 namespace has no L<level> suffix, so set_seed_ch7(k, set_index) is invariant in level. The \u00a75.1 phrasing '20 \u00d7 4 = 80 sets at L1 + 20 \u00d7 3 = 60 sets at L2 = 140 total stratified sets' is therefore an accounting overstatement \u2014 there are 80 unique stratified sets shared between L1 and L2, not 140. Same applies to the 7 nominal vs. 4 unique deterministic sets."
+  },
+  "master_seed": 20260505,
+  "namespace_prefix": "ch7:",
+  "pool_hash_prefix12": "f89434911301",
+  "pool_path": "thesis/artifacts/h_eoh_counterexample_pool.json",
+  "schema_version": 1,
+  "set_index_alignment": {
+    "interpretation": "slot-aligned only (literal \u00a75.2)",
+    "rationale": "\u00a75.2 namespace 'ch7:set:strat:{master}:k{N}:set{idx}' derives an independent seed for each (k, set_index) pair. Same set_index at different k values produces *different* CounterexampleSets \u2014 they share the slot index, not the underlying instance content. The alternative reading (nested-prefix) would require the k=2 set at set_index=5 to extend the k=1 set at set_index=5 with one additional draw under the same set_seed; the literal \u00a75.2 namespace does not support this and the design doc was not amended to specify either reading. Surfaced and resolved in favor of the literal namespace; the cross-k matched-pair statistic is therefore slot-aligned, not nested-prefix-aligned."
+  },
+  "stratified_sets": [
+    {
+      "cell_label": "stratified_representative@k=1@set=00",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 0,
+      "set_seed": 1008569312,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=01",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 1,
+      "set_seed": 3790398255,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=02",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 2,
+      "set_seed": 4227903919,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=03",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 3,
+      "set_seed": 17108863,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=04",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 4,
+      "set_seed": 692682152,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=05",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 5,
+      "set_seed": 971120892,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=06",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 6,
+      "set_seed": 1242877255,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=07",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 7,
+      "set_seed": 1268300582,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=08",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 8,
+      "set_seed": 3111759588,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=09",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 9,
+      "set_seed": 2705945195,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=10",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 10,
+      "set_seed": 2396594523,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=11",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 11,
+      "set_seed": 2118331512,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=12",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 12,
+      "set_seed": 285461418,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=13",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 13,
+      "set_seed": 1227449196,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=14",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 14,
+      "set_seed": 1184953608,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=15",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 15,
+      "set_seed": 1435448994,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=16",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 16,
+      "set_seed": 4270151708,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=17",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 17,
+      "set_seed": 3740976115,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=18",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 18,
+      "set_seed": 3094412254,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=1@set=19",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 1,
+      "set_index": 19,
+      "set_seed": 1191769296,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=00",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 0,
+      "set_seed": 3522136034,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=01",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 1,
+      "set_seed": 3704575600,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=02",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 2,
+      "set_seed": 4100473156,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=03",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 3,
+      "set_seed": 75439379,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=04",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 4,
+      "set_seed": 2059175807,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=05",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 5,
+      "set_seed": 4018867125,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=06",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2022,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -5,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_28",
+            "reference_bins_used": 2017,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 6,
+      "set_seed": 4253875187,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=07",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 7,
+      "set_seed": 2536777120,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=08",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2017,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+            "reference_bins_used": 2024,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 8,
+      "set_seed": 2500600091,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=09",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 9,
+      "set_seed": 1188093746,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=10",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2047,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_6",
+            "reference_bins_used": 2039,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 10,
+      "set_seed": 981909936,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=11",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 11,
+      "set_seed": 4238833215,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=12",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 12,
+      "set_seed": 3488049221,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=13",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 13,
+      "set_seed": 2271120046,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=14",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 14,
+      "set_seed": 1145476464,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=15",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 15,
+      "set_seed": 2154193953,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=16",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2028,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_18",
+            "reference_bins_used": 2028,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 16,
+      "set_seed": 118494013,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=17",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 17,
+      "set_seed": 3413479463,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=18",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_19",
+            "reference_bins_used": 2052,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 18,
+      "set_seed": 3945634819,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=2@set=19",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 2,
+      "set_index": 19,
+      "set_seed": 1753495096,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=00",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -20,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_24",
+            "reference_bins_used": 2047,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 0,
+      "set_seed": 89553650,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=01",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2028,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_18",
+            "reference_bins_used": 2028,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_13",
+            "reference_bins_used": 2025,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 1,
+      "set_seed": 2292029880,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=02",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_13",
+            "reference_bins_used": 2025,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 2,
+      "set_seed": 1067014819,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=03",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 3,
+      "set_seed": 1062246699,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=04",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2047,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_6",
+            "reference_bins_used": 2039,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 4,
+      "set_seed": 1318482898,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=05",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_19",
+            "reference_bins_used": 2052,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2032,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_9",
+            "reference_bins_used": 2033,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 5,
+      "set_seed": 3952207627,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=06",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_19",
+            "reference_bins_used": 2052,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_3",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 6,
+      "set_seed": 3563824888,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=07",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_10",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_13",
+            "reference_bins_used": 2025,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2022,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -5,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_28",
+            "reference_bins_used": 2017,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 7,
+      "set_seed": 3137581014,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=08",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_5",
+            "reference_bins_used": 2034,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 8,
+      "set_seed": 18792949,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=09",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -20,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_24",
+            "reference_bins_used": 2047,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_5",
+            "reference_bins_used": 2034,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_19",
+            "reference_bins_used": 2052,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 9,
+      "set_seed": 4078281432,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=10",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 10,
+      "set_seed": 2491610363,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=11",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 11,
+      "set_seed": 4079809138,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=12",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_5",
+            "reference_bins_used": 2034,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 12,
+      "set_seed": 3521959404,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=13",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 13,
+      "set_seed": 684110131,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=14",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 14,
+      "set_seed": 831718921,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=15",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2028,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_18",
+            "reference_bins_used": 2028,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 15,
+      "set_seed": 3458972659,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=16",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2028,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_18",
+            "reference_bins_used": 2028,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 16,
+      "set_seed": 3933491823,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=17",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 17,
+      "set_seed": 2128489478,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=18",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 18,
+      "set_seed": 1067781420,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=4@set=19",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -20,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_24",
+            "reference_bins_used": 2047,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2029,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_14",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 4,
+      "set_index": 19,
+      "set_seed": 2701721046,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=00",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2032,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_9",
+            "reference_bins_used": 2033,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 0,
+      "set_seed": 1578605444,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=01",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_10",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_7",
+            "reference_bins_used": 2045,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_3",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2028,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_18",
+            "reference_bins_used": 2028,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 1,
+      "set_seed": 1399414328,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=02",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_7",
+            "reference_bins_used": 2045,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 2,
+      "set_seed": 3906453763,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=03",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_10",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_13",
+            "reference_bins_used": 2025,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 3,
+      "set_seed": 802682594,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=04",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_5",
+            "reference_bins_used": 2034,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2017,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+            "reference_bins_used": 2024,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 4,
+      "set_seed": 1788696364,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=05",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_10",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2022,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -5,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_28",
+            "reference_bins_used": 2017,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2017,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+            "reference_bins_used": 2024,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 5,
+      "set_seed": 2692299244,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=06",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_10",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2047,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_6",
+            "reference_bins_used": 2039,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2017,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+            "reference_bins_used": 2024,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 6,
+      "set_seed": 1755107993,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=07",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_10",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_3",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 7,
+      "set_seed": 4244673228,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=08",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -20,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_24",
+            "reference_bins_used": 2047,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_7",
+            "reference_bins_used": 2045,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2017,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+            "reference_bins_used": 2024,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2029,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_14",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_13",
+            "reference_bins_used": 2025,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 8,
+      "set_seed": 3385861936,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=09",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_19",
+            "reference_bins_used": 2052,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 9,
+      "set_seed": 747426801,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=10",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2028,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_18",
+            "reference_bins_used": 2028,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_7",
+            "reference_bins_used": 2045,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_8",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 10,
+      "set_seed": 3827163512,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=11",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_7",
+            "reference_bins_used": 2045,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 11,
+      "set_seed": 3058021617,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=12",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_7",
+            "reference_bins_used": 2045,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2017,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+            "reference_bins_used": 2024,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 12,
+      "set_seed": 3988575060,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=13",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2017,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+            "reference_bins_used": 2024,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2022,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -5,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_28",
+            "reference_bins_used": 2017,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 13,
+      "set_seed": 888737933,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=14",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -21,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_29",
+            "reference_bins_used": 2041,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2049,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_26",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_19",
+            "reference_bins_used": 2052,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 14,
+      "set_seed": 3390421910,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=15",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2038,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 13,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_17",
+            "reference_bins_used": 2051,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_27",
+            "reference_bins_used": 2030,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_1",
+            "reference_bins_used": 2031,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_5",
+            "reference_bins_used": 2034,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 15,
+      "set_seed": 3228183828,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=16",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -20,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_24",
+            "reference_bins_used": 2047,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2022,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -5,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_28",
+            "reference_bins_used": 2017,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2062,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 7,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_4",
+            "reference_bins_used": 2069,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_22",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2047,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_6",
+            "reference_bins_used": 2039,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_5",
+            "reference_bins_used": 2034,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 16,
+      "set_seed": 3414246272,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=17",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_10",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2036,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_5",
+            "reference_bins_used": 2034,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2029,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_14",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2032,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_9",
+            "reference_bins_used": 2033,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2028,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 0,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_18",
+            "reference_bins_used": 2028,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 17,
+      "set_seed": 3498901944,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=18",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2034,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 14,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+            "reference_bins_used": 2048,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -25,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_2",
+            "reference_bins_used": 2029,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2027,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_13",
+            "reference_bins_used": 2025,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2067,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_15",
+            "reference_bins_used": 2073,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2029,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 8,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_14",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 4,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_19",
+            "reference_bins_used": 2052,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 18,
+      "set_seed": 1116569019,
+      "strategy": "stratified_representative"
+    },
+    {
+      "cell_label": "stratified_representative@k=8@set=19",
+      "counterexample_set": {
+        "items": [
+          {
+            "candidate_bins_used": 2037,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 12,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_11",
+            "reference_bins_used": 2049,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2054,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -11,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_21",
+            "reference_bins_used": 2043,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2080,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -15,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_25",
+            "reference_bins_used": 2065,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2032,
+            "candidate_hash": "8ca83676ae76",
+            "gap": 1,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_9",
+            "reference_bins_used": 2033,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2048,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -2,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_3",
+            "reference_bins_used": 2046,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2040,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_12",
+            "reference_bins_used": 2037,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2063,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -3,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_0",
+            "reference_bins_used": 2060,
+            "reference_hash": "62a2846c597e"
+          },
+          {
+            "candidate_bins_used": 2061,
+            "candidate_hash": "8ca83676ae76",
+            "gap": -6,
+            "instance_id": "thesis_train_select:thesis_train_select_5k_23",
+            "reference_bins_used": 2055,
+            "reference_hash": "62a2846c597e"
+          }
+        ],
+        "schema_version": 1
+      },
+      "determinism": "stochastic",
+      "k": 8,
+      "set_index": 19,
+      "set_seed": 2653808021,
+      "strategy": "stratified_representative"
+    }
+  ],
+  "totals": {
+    "n_design_doc_5p1_nominal_total": 151,
+    "n_unique_deterministic_sets": 4,
+    "n_unique_sets_total": 84,
+    "n_unique_stratified_sets": 80
+  }
+}

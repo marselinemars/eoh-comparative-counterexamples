@@ -1,0 +1,96 @@
+{
+  "design_doc_section": "\u00a718.7 E (validation portion of \u00a77.4)",
+  "method": "Cross-strategy matched-pair on terminal cumulative \u0394_step at L2, stratified by k, on validation trajectories. n_pairs = n_trajectories = 3 per cell \u2014 underpowered relative to primary's n=60 per cell.",
+  "per_k_results": [
+    {
+      "boundary_substitution_active": true,
+      "cell_a_id": "CH7-09",
+      "cell_b_id": "CH7-12",
+      "ci_95": [
+        4.1666666666667425,
+        6.933333333333167
+      ],
+      "ci_excludes_zero": true,
+      "direction": "positive",
+      "k": 1,
+      "matched_pair_diffs": [
+        6.933333333333167,
+        4.1666666666667425,
+        4.300000000000182
+      ],
+      "mean_diff": 5.133333333333364,
+      "n_matched_trajectories": 3,
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_only_at_k1"
+    },
+    {
+      "boundary_substitution_active": false,
+      "cell_a_id": "CH7-10",
+      "cell_b_id": "CH7-13",
+      "ci_95": [
+        -11.399999999999864,
+        6.033333333333303
+      ],
+      "ci_excludes_zero": false,
+      "direction": "null",
+      "k": 2,
+      "matched_pair_diffs": [
+        -5.433333333333394,
+        -11.399999999999864,
+        6.033333333333303
+      ],
+      "mean_diff": -3.599999999999985,
+      "n_matched_trajectories": 3,
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best"
+    },
+    {
+      "boundary_substitution_active": false,
+      "cell_a_id": "CH7-11",
+      "cell_b_id": "CH7-14",
+      "ci_95": [
+        -0.966666666666697,
+        4.333333333333485
+      ],
+      "ci_excludes_zero": false,
+      "direction": "null",
+      "k": 4,
+      "matched_pair_diffs": [
+        -0.6999999999998181,
+        -0.966666666666697,
+        4.333333333333485
+      ],
+      "mean_diff": 0.88888888888899,
+      "n_matched_trajectories": 3,
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best"
+    }
+  ],
+  "reproduction_vs_primary": {
+    "agreement_per_k": [
+      {
+        "agree": true,
+        "k": 1,
+        "primary_direction": "positive",
+        "validation_direction": "positive"
+      },
+      {
+        "agree": true,
+        "k": 2,
+        "primary_direction": "null",
+        "validation_direction": "null"
+      },
+      {
+        "agree": true,
+        "k": 4,
+        "primary_direction": "null",
+        "validation_direction": "null"
+      }
+    ],
+    "fully_agrees_across_k": true,
+    "n_trajectories_per_cell": 3,
+    "note": "Validation is underpowered at n=3 trajectories per cell vs. primary's n=60 records per cell. A 'null' direction in validation that was 'positive' in primary may reflect low statistical power rather than disagreement; the matched-pair point estimates and signs are the more informative comparison.",
+    "primary_artifact": "thesis/artifacts/chapter7_l2_interaction_stratified_by_k.json"
+  },
+  "schema_version": 1
+}

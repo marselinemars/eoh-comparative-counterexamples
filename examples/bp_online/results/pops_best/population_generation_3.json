@@ -1,0 +1,6 @@
+{
+     "algorithm": "This algorithm computes a score by non-linearly interpolating between a best-fit potential and a harmonic-resonance potential using a sigmoid weight derived from the item's relative fill factor.",
+     "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 0.5\n    beta = 20.0\n    gamma = 8.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    rem_space = bins - item_float\n    \n    harmonic_ratio = rem_space / (item_float + epsilon)\n    \n    potential_bf = np.exp(-alpha * harmonic_ratio)\n\n    disharmony_sq = np.power(harmonic_ratio - np.round(harmonic_ratio), 2)\n    potential_h = np.exp(-beta * disharmony_sq)\n\n    fill_factor = item_float / (bins + epsilon)\n    mixer_weight = 1.0 / (1.0 + np.exp(-gamma * (fill_factor - 0.5)))\n    \n    scores = (1.0 - mixer_weight) * potential_bf + mixer_weight * potential_h\n    \n    return scores\n",
+     "objective": 0.02485,
+     "other_inf": null
+}

@@ -1,0 +1,14 @@
+[
+     {
+          "algorithm": "A novel scoring function that models bin preference as a weighted sum of two Gaussian distributions, one rewarding a tight fit (minimal waste) and the other rewarding a large, reusable leftover space (waste equal to the item size).",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    waste = bins - item\n    sigma_tight_fit_sq = (0.2 * item + 1.0)**2\n    sigma_useful_gap_sq = (0.4 * item + 1.0)**2\n    gap_preference_weight = 0.5\n    score_tight_fit = np.exp(-(waste**2) / sigma_tight_fit_sq)\n    score_useful_gap = np.exp(-((waste - item)**2) / sigma_useful_gap_sq)\n    scores = score_tight_fit + gap_preference_weight * score_useful_gap\n    return scores\n",
+          "objective": 0.03139,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The algorithm scores each bin using a weighted sum of three metrics: the tightness of the fit, the relative space utilization, and a preference for using smaller available bins.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    w_fit = 1.0\n    w_util = 0.5\n    w_preserve = 0.2\n    \n    fit_metric = 1.0 / (bins - item + 1.0)\n    util_metric = item / bins\n    preserve_metric = 1.0 / bins\n    \n    scores = (w_fit * fit_metric) + (w_util * util_metric) + (w_preserve * preserve_metric)\n    \n    return scores\n",
+          "objective": 0.03984,
+          "other_inf": null
+     }
+]

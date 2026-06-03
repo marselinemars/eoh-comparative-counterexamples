@@ -1,0 +1,45 @@
+{
+  "design_doc": "thesis/writing/chapter4_extra_trajectories_design.md (\u00a76 regime classification)",
+  "pairs": {
+    "ch5_L1_k4_stratified_vs_wpb": {
+      "a_mean_n3": 7.122222222222263,
+      "b_mean_n3": 4.311111111111283,
+      "a_mean_n6": 8.200000000000045,
+      "b_mean_n6": 2.1555555555556416,
+      "a_ci_95_n6": [
+        4.922222222222255,
+        11.544444444444517
+      ],
+      "b_ci_95_n6": [
+        0.5055555555555884,
+        4.200416666666783
+      ],
+      "direction_n3": "a>b",
+      "direction_n6": "a>b",
+      "ordering_inverted": false,
+      "n6_cis_overlap": false
+    },
+    "ch7_L2_k1_stratified_vs_wo1": {
+      "a_mean_n3": 8.311111111111208,
+      "b_mean_n3": 3.1777777777778433,
+      "a_mean_n6": 7.372222222222338,
+      "b_mean_n6": 2.672222222222293,
+      "a_ci_95_n6": [
+        5.566666666666833,
+        9.405555555555642
+      ],
+      "b_ci_95_n6": [
+        1.083333333333447,
+        4.155555555555604
+      ],
+      "direction_n3": "a>b",
+      "direction_n6": "a>b",
+      "ordering_inverted": false,
+      "n6_cis_overlap": false
+    }
+  },
+  "regime": "alpha_agree",
+  "regime_interpretation": "Both pairs preserve their n=3 ordering at n=6 \u2014 the original finding is strengthened.",
+  "bootstrap_n_resamples": 10000,
+  "bootstrap_seed": 20260523
+}

@@ -1,0 +1,55 @@
+{
+  "anchors": [
+    {
+      "cell_label": "stratified_representative@L1",
+      "ch6_validation_terminal_cum_mean": 6.722222222222247,
+      "ch7_cell_id": "CH7-03",
+      "ch7_per_trajectory": [
+        3.766666666666879,
+        10.0,
+        4.866666666666788
+      ],
+      "ch7_validation_terminal_cum_mean": 6.211111111111222,
+      "delta_ch7_minus_ch6": -0.5111111111110249
+    },
+    {
+      "cell_label": "stratified_representative@L2",
+      "ch6_validation_terminal_cum_mean": 5.266666666666727,
+      "ch7_cell_id": "CH7-11",
+      "ch7_per_trajectory": [
+        6.266666666666879,
+        5.7333333333333485,
+        7.066666666666833
+      ],
+      "ch7_validation_terminal_cum_mean": 6.355555555555687,
+      "delta_ch7_minus_ch6": 1.0888888888889596
+    },
+    {
+      "cell_label": "worst_plus_best@L1",
+      "ch6_validation_terminal_cum_mean": 7.322222222222384,
+      "ch7_cell_id": "CH7-07",
+      "ch7_per_trajectory": [
+        4.0,
+        0.0,
+        9.833333333333485
+      ],
+      "ch7_validation_terminal_cum_mean": 4.611111111111161,
+      "delta_ch7_minus_ch6": -2.7111111111112223
+    },
+    {
+      "cell_label": "worst_plus_best@L2",
+      "ch6_validation_terminal_cum_mean": 3.488888888888899,
+      "ch7_cell_id": "CH7-14",
+      "ch7_per_trajectory": [
+        6.966666666666697,
+        6.7000000000000455,
+        2.7333333333333485
+      ],
+      "ch7_validation_terminal_cum_mean": 5.466666666666697,
+      "delta_ch7_minus_ch6": 1.9777777777777978
+    }
+  ],
+  "design_doc_section": "\u00a718.7 F",
+  "note": "ch6 reference numbers read from thesis/artifacts/chapter6_validation_batch_overview.json when present (per-cell mean over 3 trajectories of step-5 cumulative). Absent values indicate the ch6 overview was not found at that path \u2014 chapter prose should cite the ch6 validation source explicitly.",
+  "schema_version": 1
+}

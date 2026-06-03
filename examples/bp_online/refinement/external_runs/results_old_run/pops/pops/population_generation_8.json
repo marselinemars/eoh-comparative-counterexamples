@@ -1,0 +1,32 @@
+[
+     {
+          "algorithm": "This algorithm prioritizes bins that can accommodate the current item and have a remaining capacity closest to a multiple of the item size, aiming for perfect fits and minimizing wasted space.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    remainder = bins % item\n    perfect_fit_bonus = np.where(remainder == 0, 1000, 0)\n    deviation_from_multiple = np.minimum(remainder, item - remainder)\n    scores = perfect_fit_bonus - deviation_from_multiple\n    scores = np.where(bins >= item, scores, -np.inf)\n    return scores\n",
+          "objective": 0.02666,
+          "other_inf": null
+     },
+     {
+          "algorithm": "Prioritize bins based on the logarithm of their remaining capacity relative to item size, with a penalty for bins that are too large and a bonus for bins that are a near-perfect fit, to encourage tighter packing.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    capacity_ratio = bins / item\n    log_ratio_penalty = -np.log(bins / item + 1e-9)\n    near_fit_bonus = -np.abs(capacity_ratio - np.round(capacity_ratio)) * 100\n    large_bin_penalty = -bins * 0.05\n    scores = np.where(bins >= item, log_ratio_penalty + near_fit_bonus + large_bin_penalty, -np.inf)\n    return scores\n",
+          "objective": 0.02817,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The algorithms aim to maximize the desirability of a bin for an item by considering both the fit and the potential future implications of the choice, prioritizing bins that leave a \"better\" remaining capacity.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    remaining_capacity_ratio = bins / item\n    initial_score = -np.abs(remaining_capacity_ratio - np.round(remaining_capacity_ratio))\n    future_usability_factor = np.log(bins + 1)\n    combined_score = initial_score * 10 - future_usability_factor\n    scores = np.where(bins >= item, combined_score, -np.inf)\n    return scores\n",
+          "objective": 0.02988,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm assigns scores by prioritizing bins that can accommodate the item with minimal leftover space, while also considering the bin's overall capacity and penalizing bins that are already full or close to full.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    remaining_capacities_after_item = bins - item\n    bin_usage_ratio = (bins - remaining_capacities_after_item) / bins\n    scores = 1.0 / (remaining_capacities_after_item + 1e-9) - bin_usage_ratio * 0.5 - (bins / np.max(bins)) * 0.2\n    scores = np.where(remaining_capacities_after_item < 0, -np.inf, scores)\n    scores = np.where(bins == 0, -np.inf, scores)\n    return scores\n",
+          "objective": 0.03049,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm prioritizes bins that have a remaining capacity closest to a multiple of the item size, with a penalty for very large bins and a bonus for bins that are almost full.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    ideal_fill_ratio = 1.0\n    capacity_diff_from_ideal_multiple = bins - np.round(bins / item) * item\n    fit_score = -np.abs(capacity_diff_from_ideal_multiple)\n    large_bin_penalty = -bins * 0.1\n    bin_fullness = bins / item\n    fullness_bonus = np.where(bin_fullness < 1.1, 50, 0)\n    scores = np.where(bins >= item, fit_score + large_bin_penalty + fullness_bonus, -np.inf)\n    return scores\n",
+          "objective": 0.0329,
+          "other_inf": null
+     }
+]

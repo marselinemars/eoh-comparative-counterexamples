@@ -1,0 +1,156 @@
+{
+  "n_records_loaded": {
+    "full": 60,
+    "gap-only": 60,
+    "no-reference": 60
+  },
+  "per_cell_stats": {
+    "full (ch5 stratified_representative L1 k=4)": {
+      "n": 60,
+      "mean": -30.388888888888804,
+      "median": 0.0,
+      "std": 81.2544091613538,
+      "min": -344.96666666666647,
+      "max": 8.0,
+      "p10": -215.39999999999986,
+      "p25": -4.458333333333371,
+      "p75": 2.966666666666697,
+      "p90": 4.9933333333333625,
+      "iqr": 7.425000000000068,
+      "trim10": -7.4895833333332575,
+      "positive_tail_mass": 0.35,
+      "catastrophic_tail_mass_at_-50": 0.13333333333333333,
+      "catastrophic_tail_mass_at_-100": 0.11666666666666667
+    },
+    "gap-only (E2)": {
+      "n": 59,
+      "mean": -238.9322033898304,
+      "median": -13.399999999999864,
+      "std": 522.2273581499094,
+      "min": -1687.5999999999997,
+      "max": 9.0,
+      "p10": -1497.5666666666666,
+      "p25": -126.79999999999995,
+      "p75": -3.949999999999818,
+      "p90": 4.3600000000000385,
+      "iqr": 122.85000000000014,
+      "trim10": -118.47823129251688,
+      "positive_tail_mass": 0.15254237288135594,
+      "catastrophic_tail_mass_at_-50": 0.3220338983050847,
+      "catastrophic_tail_mass_at_-100": 0.2542372881355932
+    },
+    "no-reference (E1)": {
+      "n": 56,
+      "mean": -329.32559523809516,
+      "median": -47.416666666666515,
+      "std": 601.6162552537106,
+      "min": -2220.5,
+      "max": 8.333333333333485,
+      "p10": -1571.7166666666665,
+      "p25": -180.23333333333335,
+      "p75": -10.199999999999932,
+      "p90": -3.483333333333235,
+      "iqr": 170.03333333333342,
+      "trim10": -209.6304347826086,
+      "positive_tail_mass": 0.08928571428571429,
+      "catastrophic_tail_mass_at_-50": 0.44642857142857145,
+      "catastrophic_tail_mass_at_-100": 0.375
+    }
+  },
+  "matched_pair_contrasts": {
+    "full vs gap-only": {
+      "n_paired_observations": 59,
+      "mean_paired_diff": 207.9468926553672,
+      "median_paired_diff": 13.099999999999682,
+      "mean_ci_95": [
+        85.2545621468926,
+        351.97353107344617
+      ],
+      "median_ci_95": [
+        7.1666666666667425,
+        18.166666666666742
+      ],
+      "ci_excludes_zero_mean": true,
+      "ci_excludes_zero_median": true,
+      "bootstrap_n_resamples": 10000,
+      "bootstrap_seed": 20260522
+    },
+    "gap-only vs no-reference": {
+      "n_paired_observations": 56,
+      "mean_paired_diff": 78.63214285714288,
+      "median_paired_diff": 11.566666666666606,
+      "mean_ci_95": [
+        -116.61519345238092,
+        279.65992559523806
+      ],
+      "median_ci_95": [
+        -0.566666666666606,
+        28.749999999999886
+      ],
+      "ci_excludes_zero_mean": false,
+      "ci_excludes_zero_median": false,
+      "bootstrap_n_resamples": 10000,
+      "bootstrap_seed": 20260522
+    },
+    "full vs no-reference": {
+      "n_paired_observations": 56,
+      "mean_paired_diff": 296.9375,
+      "median_paired_diff": 33.19999999999993,
+      "mean_ci_95": [
+        150.7780952380952,
+        463.2382440476189
+      ],
+      "median_ci_95": [
+        13.399999999999864,
+        88.73333333333323
+      ],
+      "ci_excludes_zero_mean": true,
+      "ci_excludes_zero_median": true,
+      "bootstrap_n_resamples": 10000,
+      "bootstrap_seed": 20260522
+    }
+  },
+  "cliffs_delta": {
+    "full vs gap-only": 0.45875706214689266,
+    "gap-only vs no-reference": 0.22911622276029056,
+    "full vs no-reference": 0.6047619047619047
+  },
+  "argmax_equivalence": {
+    "full": {
+      "n_ok": 60,
+      "argmax_equivalent_rate": 0.0,
+      "n_argmax_equivalent": 0
+    },
+    "gap-only": {
+      "n_ok": 59,
+      "argmax_equivalent_rate": 0.0,
+      "n_argmax_equivalent": 0
+    },
+    "no-reference": {
+      "n_ok": 56,
+      "argmax_equivalent_rate": 0.0,
+      "n_argmax_equivalent": 0
+    }
+  },
+  "proposal_hash_overlap": {
+    "full vs gap-only": {
+      "n_distinct_cell_a": 45,
+      "n_distinct_cell_b": 57,
+      "n_overlap": 1,
+      "jaccard": 0.009900990099009901
+    },
+    "gap-only vs no-reference": {
+      "n_distinct_cell_a": 57,
+      "n_distinct_cell_b": 56,
+      "n_overlap": 0,
+      "jaccard": 0.0
+    },
+    "full vs no-reference": {
+      "n_distinct_cell_a": 45,
+      "n_distinct_cell_b": 56,
+      "n_overlap": 0,
+      "jaccard": 0.0
+    }
+  },
+  "regime": "B_code_matters"
+}

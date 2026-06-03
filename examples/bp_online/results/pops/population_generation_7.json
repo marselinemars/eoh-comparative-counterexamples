@@ -1,0 +1,26 @@
+[
+     {
+          "algorithm": "This algorithm scores bins by combining best-fit, worst-fit, and harmonic divisibility potentials using a dual-sigmoid weighting scheme based on relative item size.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    gamma = 4.0\n    beta = 0.5\n    delta = 6.0\n    kappa = 15.0\n    t1 = 0.33\n    t2 = 0.66\n    epsilon = 1e-9\n\n    item_float = float(item)\n    \n    rem_space = bins - item_float\n    \n    potential_bf = np.exp(-gamma * np.power(rem_space, 2))\n    potential_wf = 1.0 - np.exp(-beta * rem_space)\n    \n    divisibility_ratio = bins / (item_float + epsilon)\n    cosine_term = (np.cos(2.0 * np.pi * divisibility_ratio) + 1.0) / 2.0\n    potential_hd = np.power(cosine_term, delta)\n    \n    relative_fill = item_float / (bins + epsilon)\n    \n    sig1 = 1.0 / (1.0 + np.exp(-kappa * (relative_fill - t1)))\n    sig2 = 1.0 / (1.0 + np.exp(-kappa * (relative_fill - t2)))\n    \n    w_bf_un = sig2\n    w_wf_un = 1.0 - sig1\n    w_hd_un = sig1 * (1.0 - sig2)\n    \n    total_weight = w_bf_un + w_wf_un + w_hd_un + epsilon\n    \n    weight_bf = w_bf_un / total_weight\n    weight_wf = w_wf_un / total_weight\n    weight_hd = w_hd_un / total_weight\n    \n    scores = weight_bf * potential_bf + weight_wf * potential_wf + weight_hd * potential_hd\n    \n    return scores\n",
+          "objective": 0.01207,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm computes a score by additively combining a best-fit potential and a harmonic-resonance potential, where two separate sigmoid gates modulate the influence of each potential based on the item's relative size.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 10.0\n    beta = 5.0\n    gamma = 8.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    rem_space = bins - item_float\n    fill_factor = item_float / (bins + epsilon)\n\n    normalized_rem_sq = np.power(rem_space / (bins + epsilon), 2)\n    potential_bf = 1.0 / (1.0 + alpha * normalized_rem_sq)\n\n    harmonic_ratio = rem_space / (item_float + epsilon)\n    theta = 2.0 * np.pi * harmonic_ratio\n    potential_h = np.exp(beta * (np.cos(theta) - 1.0))\n\n    gate_bf = 1.0 / (1.0 + np.exp(gamma * (fill_factor - 0.5)))\n    gate_h = 1.0 / (1.0 + np.exp(-gamma * (fill_factor - 0.5)))\n    \n    scores = gate_bf * potential_bf + gate_h * potential_h\n    \n    return scores\n",
+          "objective": 0.01912,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm computes a score by arithmetically combining an exponential best-fit potential and a harmonic divisibility potential using sigmoid-based weights derived from the item's relative size.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    gamma = 5.0\n    delta = 8.0\n    kappa = 10.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    \n    rem_space = bins - item_float\n    potential_bf = np.exp(-gamma * np.power(rem_space, 2))\n    \n    divisibility_ratio = bins / (item_float + epsilon)\n    cosine_term = (np.cos(2.0 * np.pi * divisibility_ratio) + 1.0) / 2.0\n    potential_hd = np.power(cosine_term, delta)\n    \n    relative_fill = item_float / (bins + epsilon)\n    weight_bf = 1.0 / (1.0 + np.exp(-kappa * (relative_fill - 0.5)))\n    weight_hd = 1.0 - weight_bf\n    \n    scores = weight_bf * potential_bf + weight_hd * potential_hd\n    \n    return scores\n",
+          "objective": 0.02244,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm calculates a score by blending a hyperbolic tangent best-fit potential with an exponential-decay harmonic potential, using power-law weights derived from the item's relative size to the bin.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    bf_sensitivity = 10.0\n    h_sensitivity = 5.0\n    weight_exponent = 2.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    rem_space = bins - item_float\n    \n    wasted_ratio = rem_space / (bins + epsilon)\n    potential_bf = 1.0 - np.tanh(bf_sensitivity * wasted_ratio)\n\n    rem_space_mod_item = np.fmod(rem_space, item_float + epsilon)\n    harmonic_gap_ratio = np.minimum(rem_space_mod_item, item_float - rem_space_mod_item) / (item_float + epsilon)\n    potential_h = np.exp(-h_sensitivity * harmonic_gap_ratio)\n    \n    relative_size = item_float / (bins + epsilon)\n    weight_bf = np.power(relative_size, weight_exponent)\n    weight_h = np.power(1.0 - relative_size, weight_exponent)\n    \n    scores = weight_bf * potential_bf + weight_h * potential_h\n    \n    return scores\n",
+          "objective": 0.02334,
+          "other_inf": null
+     }
+]

@@ -1,0 +1,6 @@
+{
+     "algorithm": "This algorithm computes a score by additively combining a best-fit potential and a harmonic-resonance potential, where two separate sigmoid gates modulate the influence of each potential based on the item's relative size.",
+     "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 10.0\n    beta = 5.0\n    gamma = 8.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    rem_space = bins - item_float\n    fill_factor = item_float / (bins + epsilon)\n\n    normalized_rem_sq = np.power(rem_space / (bins + epsilon), 2)\n    potential_bf = 1.0 / (1.0 + alpha * normalized_rem_sq)\n\n    harmonic_ratio = rem_space / (item_float + epsilon)\n    theta = 2.0 * np.pi * harmonic_ratio\n    potential_h = np.exp(beta * (np.cos(theta) - 1.0))\n\n    gate_bf = 1.0 / (1.0 + np.exp(gamma * (fill_factor - 0.5)))\n    gate_h = 1.0 / (1.0 + np.exp(-gamma * (fill_factor - 0.5)))\n    \n    scores = gate_bf * potential_bf + gate_h * potential_h\n    \n    return scores\n",
+     "objective": 0.01912,
+     "other_inf": null
+}

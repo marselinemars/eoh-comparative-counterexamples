@@ -1,0 +1,82 @@
+{
+  "cell_id": "chapter4_noref",
+  "set_index": 0,
+  "seed_index": 0,
+  "seed_namespace": "ch4noref",
+  "prompt": "You are given a heuristic scoring function `incumbent` and four instances of online bin packing on which the incumbent's behavior is shown by `incumbent_bins_used`. Propose a revised scoring function whose behavior improves performance \u2014 that is, uses fewer bins \u2014 on these instances and on the broader instance distribution they represent. Return only the revised function.\n\n=== INCUMBENT HEURISTIC ===\nimport numpy as np\n\ndef score(item, bins):\n    gamma = 4.0\n    beta = 0.5\n    delta = 6.0\n    kappa = 15.0\n    t1 = 0.33\n    t2 = 0.66\n    epsilon = 1e-9\n\n    item_float = float(item)\n    \n    rem_space = bins - item_float\n    \n    potential_bf = np.exp(-gamma * np.power(rem_space, 2))\n    potential_wf = 1.0 - np.exp(-beta * rem_space)\n    \n    divisibility_ratio = bins / (item_float + epsilon)\n    cosine_term = (np.cos(2.0 * np.pi * divisibility_ratio) + 1.0) / 2.0\n    potential_hd = np.power(cosine_term, delta)\n    \n    relative_fill = item_float / (bins + epsilon)\n    \n    sig1 = 1.0 / (1.0 + np.exp(-kappa * (relative_fill - t1)))\n    sig2 = 1.0 / (1.0 + np.exp(-kappa * (relative_fill - t2)))\n    \n    w_bf_un = sig2\n    w_wf_un = 1.0 - sig1\n    w_hd_un = sig1 * (1.0 - sig2)\n    \n    total_weight = w_bf_un + w_wf_un + w_hd_un + epsilon\n    \n    weight_bf = w_bf_un / total_weight\n    weight_wf = w_wf_un / total_weight\n    weight_hd = w_hd_un / total_weight\n    \n    scores = weight_bf * potential_bf + weight_wf * potential_wf + weight_hd * potential_hd\n    \n    return scores\n\n\n=== INSTANCES ===\n  instance_01:\n    n_items: 5000, capacity: 100\n    incumbent_bins_used: 2034\n    item_distribution:\n      mean: 40.3, std: 14.6, min: 1, max: 100\n      quartiles (25/50/75): 30 / 40 / 50\n      percentiles (p10/p90): 22 / 60\n      histogram (10 buckets of width 10):\n        [ 0- 10]:   42  [10- 20]:  319  [20- 30]:  840\n        [30- 40]: 1276  [40- 50]: 1202  [50- 60]:  799\n        [60- 70]:  395  [70- 80]:  106  [80- 90]:   18\n        [90-100]:    3\n    item_samples:\n      largest 5:       [100, 95, 90, 88, 86]\n      smallest 5:      [1, 4, 5, 5, 5]\n      near-median 5:   [40, 40, 40, 40, 40]\n      random 5:        [38, 25, 64, 60, 36]\n\n  instance_02:\n    n_items: 5000, capacity: 100\n    incumbent_bins_used: 2067\n    item_distribution:\n      mean: 40.4, std: 14.6, min: 3, max: 90\n      quartiles (25/50/75): 30 / 40 / 50\n      percentiles (p10/p90): 21 / 60\n      histogram (10 buckets of width 10):\n        [ 0- 10]:   48  [10- 20]:  338  [20- 30]:  818\n        [30- 40]: 1195  [40- 50]: 1248  [50- 60]:  851\n        [60- 70]:  362  [70- 80]:  125  [80- 90]:   14\n        [90-100]:    1\n    item_samples:\n      largest 5:       [90, 87, 87, 85, 84]\n      smallest 5:      [3, 4, 4, 4, 5]\n      near-median 5:   [40, 40, 40, 40, 40]\n      random 5:        [59, 29, 52, 19, 24]\n\n  instance_03:\n    n_items: 5000, capacity: 100\n    incumbent_bins_used: 2017\n    item_distribution:\n      mean: 39.9, std: 14.7, min: 3, max: 99\n      quartiles (25/50/75): 29 / 39 / 50\n      percentiles (p10/p90): 21 / 60\n      histogram (10 buckets of width 10):\n        [ 0- 10]:   51  [10- 20]:  383  [20- 30]:  825\n        [30- 40]: 1257  [40- 50]: 1182  [50- 60]:  792\n        [60- 70]:  371  [70- 80]:  118  [80- 90]:   20\n        [90-100]:    1\n    item_samples:\n      largest 5:       [99, 89, 87, 87, 85]\n      smallest 5:      [3, 3, 3, 4, 4]\n      near-median 5:   [39, 39, 39, 39, 39]\n      random 5:        [45, 36, 46, 42, 66]\n\n  instance_04:\n    n_items: 5000, capacity: 100\n    incumbent_bins_used: 2029\n    item_distribution:\n      mean: 40.0, std: 14.7, min: 3, max: 91\n      quartiles (25/50/75): 30 / 40 / 50\n      percentiles (p10/p90): 21 / 59\n      histogram (10 buckets of width 10):\n        [ 0- 10]:   48  [10- 20]:  374  [20- 30]:  820\n        [30- 40]: 1224  [40- 50]: 1261  [50- 60]:  790\n        [60- 70]:  349  [70- 80]:  112  [80- 90]:   21\n        [90-100]:    1\n    item_samples:\n      largest 5:       [91, 89, 88, 86, 86]\n      smallest 5:      [3, 3, 4, 5, 5]\n      near-median 5:   [40, 40, 40, 40, 40]\n      random 5:        [75, 31, 41, 29, 14]\n",
+  "prompt_chars": 4093,
+  "prompt_tokens": 2031,
+  "raw_response": "```python\nimport numpy as np\n\ndef score(item, bins):\n    \"\"\"\n    A revised scoring function for online bin packing.\n\n    This heuristic improves upon the incumbent by employing a clearer, more robust\n    strategy. It simplifies the decision-making process by removing the complex and\n    likely counter-productive \"Harmonic Divisibility\" component.\n\n    The core idea is a dual-strategy approach based on the item's absolute size:\n    1.  Large Items (size > 40% of capacity): Use a strong Best-Fit (BF) strategy.\n        This prioritizes placing large, difficult items into the tightest possible\n        spaces, minimizing waste and aiming to \"close out\" bins.\n    2.  Small Items (size < 40% of capacity): Use a softened Worst-Fit (WF) strategy.\n        This places small, flexible items into the most open bins, preserving\n        medium-sized remaining spaces where upcoming medium-sized items might\n        fit perfectly.\n\n    The transition between these strategies is controlled by a single threshold `t`\n    set at the observed mean item size, making the heuristic's behavior stable\n    and predictable. Parameters have been tuned to strengthen the bin-closing\n    behavior of Best-Fit (`gamma`) and create a more decisive switch (`kappa`),\n    while reducing the tendency of Worst-Fit to open too many new bins (`beta`).\n    \"\"\"\n    # --- Parameters ---\n    # BF potential strength. Increased to more aggressively close bins.\n    gamma = 8.0\n    # WF potential strength. Decreased to reduce the creation of new bins for small items.\n    beta = 0.25\n    # Sharpness of the switch between WF and BF strategies. Increased for a more decisive change.\n    kappa = 20.0\n    # Threshold for switching strategy, based on item_size / capacity. Set near the mean item size.\n    t = 0.40\n    # Assumed bin capacity, based on the provided instances.\n    capacity = 100.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n\n    # --- Potentials ---\n    # rem_space is the space remaining *after* placing the item.\n    rem_space = bins - item_float\n\n    # Best-Fit Potential: strongly rewards leaving minimal space.\n    # The remaining space is normalized by capacity to make gamma's effect scale-invariant.\n    potential_bf = np.exp(-gamma * np.power(rem_space / capacity, 2))\n\n    # Worst-Fit Potential: rewards leaving maximal space.\n    potential_wf = 1.0 - np.exp(-beta * rem_space / capacity)\n\n    # --- Weighting Logic ---\n    # The weighting switches between BF and WF based on the item's absolute size.\n    item_fraction = item_float / capacity\n\n    # A sigmoid function creates a smooth but decisive switch based on the threshold t.\n    # if item_fraction > t, sig -> 1 (BF mode)\n    # if item_fraction < t, sig -> 0 (WF mode)\n    sig = 1.0 / (1.0 + np.exp(-kappa * (item_fraction - t)))\n\n    weight_bf = sig\n    weight_wf = 1.0 - sig\n\n    # --- Final Score ---\n    # The score is a weighted average of the two potentials. The complex Harmonic\n    # potential from the incumbent is removed entirely.\n    scores = weight_bf * potential_bf + weight_wf * potential_wf\n\n    return scores\n```",
+  "sanitize_status": "ok",
+  "sanitize_error": null,
+  "sanitized_proposal_code": "import numpy as np\n\ndef score(item, bins):\n    \"\"\"\n    A revised scoring function for online bin packing.\n\n    This heuristic improves upon the incumbent by employing a clearer, more robust\n    strategy. It simplifies the decision-making process by removing the complex and\n    likely counter-productive \"Harmonic Divisibility\" component.\n\n    The core idea is a dual-strategy approach based on the item's absolute size:\n    1.  Large Items (size > 40% of capacity): Use a strong Best-Fit (BF) strategy.\n        This prioritizes placing large, difficult items into the tightest possible\n        spaces, minimizing waste and aiming to \"close out\" bins.\n    2.  Small Items (size < 40% of capacity): Use a softened Worst-Fit (WF) strategy.\n        This places small, flexible items into the most open bins, preserving\n        medium-sized remaining spaces where upcoming medium-sized items might\n        fit perfectly.\n\n    The transition between these strategies is controlled by a single threshold `t`\n    set at the observed mean item size, making the heuristic's behavior stable\n    and predictable. Parameters have been tuned to strengthen the bin-closing\n    behavior of Best-Fit (`gamma`) and create a more decisive switch (`kappa`),\n    while reducing the tendency of Worst-Fit to open too many new bins (`beta`).\n    \"\"\"\n    # --- Parameters ---\n    # BF potential strength. Increased to more aggressively close bins.\n    gamma = 8.0\n    # WF potential strength. Decreased to reduce the creation of new bins for small items.\n    beta = 0.25\n    # Sharpness of the switch between WF and BF strategies. Increased for a more decisive change.\n    kappa = 20.0\n    # Threshold for switching strategy, based on item_size / capacity. Set near the mean item size.\n    t = 0.40\n    # Assumed bin capacity, based on the provided instances.\n    capacity = 100.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n\n    # --- Potentials ---\n    # rem_space is the space remaining *after* placing the item.\n    rem_space = bins - item_float\n\n    # Best-Fit Potential: strongly rewards leaving minimal space.\n    # The remaining space is normalized by capacity to make gamma's effect scale-invariant.\n    potential_bf = np.exp(-gamma * np.power(rem_space / capacity, 2))\n\n    # Worst-Fit Potential: rewards leaving maximal space.\n    potential_wf = 1.0 - np.exp(-beta * rem_space / capacity)\n\n    # --- Weighting Logic ---\n    # The weighting switches between BF and WF based on the item's absolute size.\n    item_fraction = item_float / capacity\n\n    # A sigmoid function creates a smooth but decisive switch based on the threshold t.\n    # if item_fraction > t, sig -> 1 (BF mode)\n    # if item_fraction < t, sig -> 0 (WF mode)\n    sig = 1.0 / (1.0 + np.exp(-kappa * (item_fraction - t)))\n\n    weight_bf = sig\n    weight_wf = 1.0 - sig\n\n    # --- Final Score ---\n    # The score is a weighted average of the two potentials. The complex Harmonic\n    # potential from the incumbent is removed entirely.\n    scores = weight_bf * potential_bf + weight_wf * potential_wf\n\n    return scores",
+  "proposal_hash": "2f9c92dbc830",
+  "delta_step": -250.33333333333326,
+  "delta_gate": -251.06666666666683,
+  "mean_bins_h_eoh_train_step": 2045.6333333333334,
+  "mean_bins_proposal_train_step": 2295.9666666666667,
+  "argmax_equivalent_to_h_eoh_on_train_step": false,
+  "wall_clock_seconds": 147.25,
+  "llm_metadata": {
+    "model": "gemini-2.5-pro",
+    "temperature": 1.0,
+    "max_output_tokens": 32768,
+    "reasoning_effort": "medium",
+    "reasoning_effort_requested": "medium",
+    "max_output_tokens_requested": 32768,
+    "seed_requested": 4227910211,
+    "seed_honored": false,
+    "raw_response_metadata": {
+      "usage": {
+        "prompt_tokens": 2031,
+        "completion_tokens": 794,
+        "total_tokens": 12933,
+        "thoughts_token_count": 10108
+      },
+      "finish_reason": "STOP",
+      "model_returned": "gemini-2.5-pro",
+      "response_id": "y8cQap-_NLC61dkPr4iIeQ",
+      "vertex_project": "ahd-project-494817",
+      "vertex_location": "global"
+    }
+  },
+  "counterexample_set": {
+    "items": [
+      {
+        "candidate_bins_used": 2034,
+        "candidate_hash": "8ca83676ae76",
+        "gap": 14,
+        "instance_id": "thesis_train_select:thesis_train_select_5k_16",
+        "reference_bins_used": 2048,
+        "reference_hash": "62a2846c597e"
+      },
+      {
+        "candidate_bins_used": 2067,
+        "candidate_hash": "8ca83676ae76",
+        "gap": -20,
+        "instance_id": "thesis_train_select:thesis_train_select_5k_24",
+        "reference_bins_used": 2047,
+        "reference_hash": "62a2846c597e"
+      },
+      {
+        "candidate_bins_used": 2017,
+        "candidate_hash": "8ca83676ae76",
+        "gap": 7,
+        "instance_id": "thesis_train_select:thesis_train_select_5k_20",
+        "reference_bins_used": 2024,
+        "reference_hash": "62a2846c597e"
+      },
+      {
+        "candidate_bins_used": 2029,
+        "candidate_hash": "8ca83676ae76",
+        "gap": 8,
+        "instance_id": "thesis_train_select:thesis_train_select_5k_14",
+        "reference_bins_used": 2037,
+        "reference_hash": "62a2846c597e"
+      }
+    ],
+    "schema_version": 1
+  },
+  "incumbent_hash": "8ca83676ae76",
+  "reference_hash": "62a2846c597e"
+}

@@ -1,0 +1,25 @@
+{
+  "finished_at": "2026-05-11T18:33:41.022615+00:00",
+  "output_dir": "C:\\Users\\pc omen\\Documents\\testingOriginalEoh\\thesis\\results\\chapter7_validation_batch_gemini",
+  "settings": {
+    "inter_call_sleep_s": 3.0,
+    "max_output_tokens": 32768,
+    "provider": "vertex",
+    "reasoning_effort": "medium",
+    "temperature": 1.0,
+    "timeout_seconds": 600.0
+  },
+  "started_at": "2026-05-11T15:28:10.765367+00:00",
+  "totals": {
+    "completed_at_end": 210,
+    "completed_at_start": 163,
+    "exit_code": 0,
+    "n_accepted_this_session": 9,
+    "n_fail_per_label_this_session": {
+      "rejected_argmax_equivalent": 6,
+      "rejected_regression": 31
+    },
+    "n_run_this_session": 46,
+    "plan_size": 210
+  }
+}

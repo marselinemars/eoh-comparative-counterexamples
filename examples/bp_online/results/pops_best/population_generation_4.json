@@ -1,0 +1,6 @@
+{
+     "algorithm": "This algorithm calculates a score by blending a power-law fit potential with a periodic harmonic potential, where the blending is controlled by a power function of the item's relative fill factor.",
+     "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 0.5\n    beta = 10.0\n    gamma = 2.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    \n    rem_space = bins - item_float\n    \n    potential_bf = np.power(1.0 + rem_space, -alpha)\n    \n    harmonic_ratio = rem_space / (item_float + epsilon)\n    potential_h = np.power((1.0 + np.cos(2.0 * np.pi * harmonic_ratio)) / 2.0, beta)\n    \n    fill_factor = item_float / (bins + epsilon)\n    mixer_weight = np.power(fill_factor, gamma)\n    \n    scores = (1.0 - mixer_weight) * potential_bf + mixer_weight * potential_h\n    \n    return scores\n",
+     "objective": 0.02425,
+     "other_inf": null
+}

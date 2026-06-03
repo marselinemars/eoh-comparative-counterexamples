@@ -1,0 +1,148 @@
+{
+  "bootstrap_n_resamples": 5000,
+  "catastrophe_threshold": -50.0,
+  "comparison_to_pooled": {
+    "ch7_pooled_at_k4_delta_gate_ci_4cell_2x2": [
+      -10.281556992337123,
+      121.4079487547892
+    ],
+    "ch7_pooled_at_k4_delta_step_ci_4cell_2x2": [
+      -11.348812739463622,
+      120.04012883141762
+    ],
+    "note": "The pooled-at-k=4 statistic from chapter7_anchor_reproduction.json is the 2x2 L1-vs-L2 difference-of-differences ((strat_L2 - strat_L1) - (wpb_L2 - wpb_L1)). The per-k results above are 2-cell L2-only matched-pair differences (strat_L2_at_k - wpb_L2_at_k), not 2x2 interactions. The two statistics are different by design: \u00a77.3 measures whether the structure axis interacts with selection at k=4; \u00a77.4 measures whether the cross-strategy gap at L2 is itself stable across k."
+  },
+  "coordinate_alignment": "slot-aligned per \u00a712 patched lock (commit f5f623). stratified flat index = set_index*3 + seed_index; wpb / wo1 flat index = seed_index.",
+  "design_doc_section": "\u00a77.4",
+  "generated_at": "2026-05-10T15:00:59.577652+00:00",
+  "headline_summary": {
+    "delta_gate_sign_stable_across_k": true,
+    "delta_step_sign_stable_across_k": true,
+    "k1_delta_gate_direction": "positive",
+    "k1_delta_step_direction": "positive",
+    "k2_delta_gate_direction": "null",
+    "k2_delta_step_direction": "null",
+    "k4_delta_gate_direction": "null",
+    "k4_delta_step_direction": "null",
+    "u_shape_test": "Whether the per-k interaction CI is sign-stable across k. If signs differ between k=2 and {k=1, k=4}, the U-shape observed in the cell-mean is itself a cross-strategy structural feature; if signs agree across k, the U-shape is a parallel main effect at both strategies."
+  },
+  "k1_special_case": "worst_only_at_k1 substitutes for worst_plus_best per \u00a73.8 boundary lock (worst_plus_best is undefined at k=1)",
+  "method": "Cross-strategy matched-pair mean \u0394 at L2, stratified by k. For each k \u2208 {1, 2, 4}, the per-pair statistic is \u0394(strat_L2_k_i) \u2212 \u0394(wpb_or_sub_L2_k_i) at slot-aligned coordinate i; the reported CI is the 5,000-resample bootstrap CI on the mean of paired differences.",
+  "per_k_results": [
+    {
+      "boundary_substitution_active": true,
+      "catastrophe_rate_diff_at_-50": {
+        "bootstrap_ci_95_pp": [
+          -18.305084745762713,
+          1.8361581920903967
+        ],
+        "diff_pp": -8.248587570621469,
+        "stratified_rate": 0.05084745762711865,
+        "wpb_or_substitute_rate": 0.13333333333333333
+      },
+      "cell_a_id": "CH7-09",
+      "cell_b_id": "CH7-12",
+      "delta_gate": {
+        "ci_excludes_zero": true,
+        "direction": "positive",
+        "interaction_ci_95": [
+          15.361257062146883,
+          165.66774011299435
+        ],
+        "interaction_mean_diff": 82.235593220339
+      },
+      "delta_step": {
+        "ci_excludes_zero": true,
+        "direction": "positive",
+        "interaction_ci_95": [
+          15.746850282485875,
+          167.990918079096
+        ],
+        "interaction_mean_diff": 82.1632768361582
+      },
+      "k": 1,
+      "n_matched_pairs": 59,
+      "n_records_strategy_a": 59,
+      "n_records_strategy_b": 60,
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_only_at_k1"
+    },
+    {
+      "boundary_substitution_active": false,
+      "catastrophe_rate_diff_at_-50": {
+        "bootstrap_ci_95_pp": [
+          -19.9159604519774,
+          3.6440677966101704
+        ],
+        "diff_pp": -8.163841807909602,
+        "stratified_rate": 0.1016949152542373,
+        "wpb_or_substitute_rate": 0.18333333333333332
+      },
+      "cell_a_id": "CH7-10",
+      "cell_b_id": "CH7-13",
+      "delta_gate": {
+        "ci_excludes_zero": false,
+        "direction": "null",
+        "interaction_ci_95": [
+          -7.789194915254186,
+          238.7452259887005
+        ],
+        "interaction_mean_diff": 113.8587570621469
+      },
+      "delta_step": {
+        "ci_excludes_zero": false,
+        "direction": "null",
+        "interaction_ci_95": [
+          -6.607838983050855,
+          238.69341807909603
+        ],
+        "interaction_mean_diff": 114.11807909604521
+      },
+      "k": 2,
+      "n_matched_pairs": 59,
+      "n_records_strategy_a": 59,
+      "n_records_strategy_b": 60,
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best"
+    },
+    {
+      "boundary_substitution_active": false,
+      "catastrophe_rate_diff_at_-50": {
+        "bootstrap_ci_95_pp": [
+          -18.96551724137931,
+          3.448275862068966
+        ],
+        "diff_pp": -6.896551724137931,
+        "stratified_rate": 0.06896551724137931,
+        "wpb_or_substitute_rate": 0.13793103448275862
+      },
+      "cell_a_id": "CH7-11",
+      "cell_b_id": "CH7-14",
+      "delta_gate": {
+        "ci_excludes_zero": false,
+        "direction": "null",
+        "interaction_ci_95": [
+          -4.035163690476187,
+          24.751086309523803
+        ],
+        "interaction_mean_diff": 9.335714285714289
+      },
+      "delta_step": {
+        "ci_excludes_zero": false,
+        "direction": "null",
+        "interaction_ci_95": [
+          -5.275833333333291,
+          23.906101190476214
+        ],
+        "interaction_mean_diff": 8.708928571428569
+      },
+      "k": 4,
+      "n_matched_pairs": 56,
+      "n_records_strategy_a": 58,
+      "n_records_strategy_b": 58,
+      "strategy_a": "stratified_representative",
+      "strategy_b": "worst_plus_best"
+    }
+  ],
+  "schema_version": 1
+}

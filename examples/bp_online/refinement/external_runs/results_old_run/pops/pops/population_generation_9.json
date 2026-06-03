@@ -1,0 +1,62 @@
+[
+     {
+          "algorithm": "The new algorithm emphasizes the utilization of feasible bins by introducing a modified quadratic score based on the inverse of available bin capacity, an adjusted logarithmic penalty for bins approaching capacity, and a bias towards larger bins which can accommodate additional items more efficiently.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # {The new algorithm emphasizes the utilization of feasible bins by introducing a modified quadratic score based on the inverse of available bin capacity, an adjusted logarithmic penalty for bins approaching capacity, and a bias towards larger bins which can accommodate additional items more efficiently.}\n    \n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate the inverse availability ratio\n    inverse_availability_ratio = 1 / (feasible_bins - item)\n    \n    # Apply a logarithmic penalty for bins nearing full capacity\n    logarithmic_penalty = np.log((bins.max() - feasible_bins) / (bins.max() - item + 1e-10))\n    \n    # Introduce a size bias where larger bins receive a positive adjustment\n    size_bias = np.where(feasible_bins > item * 1.5, 1.3, 1.0)\n    \n    # Calculate final scores combining all components\n    scores = inverse_availability_ratio * (1 + logarithmic_penalty) * size_bias\n    \n    return scores",
+          "objective": 0.04175,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm scores each feasible bin by incorporating the inverse of the remaining capacity ratio, an exponential penalty to elevate bins that are less utilized while dominating the total capacity of the bins, and a factor that increases the score for bins with a remaining capacity that is between 50% and 75% of their max capacity to further balance utilization.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate the remaining capacity ratio\n    remaining_capacity_ratio = feasible_bins / np.max(bins)\n    \n    # Apply an exponential penalty for bins that are less utilized\n    utilization_penalty = np.exp(-((bins.max() - feasible_bins) / bins.max()))\n    \n    # Introduce a bonus factor for bins with a remaining capacity between 50% and 75%\n    bonus_factor = np.where((feasible_bins > (0.5 * bins.max())) & (feasible_bins < (0.75 * bins.max())), 1.2, 1.0)\n    \n    # Calculate final scores combining all components\n    scores = (1 / remaining_capacity_ratio) * utilization_penalty * bonus_factor\n    \n    return scores",
+          "objective": 0.04206,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm calculates scores for each bin by emphasizing bins that have a higher remaining capacity relative to the item size, incorporating a logarithmic scaling factor to reduce the impact of larger bins while also penalizing bins that are too close to full capacity.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate the score based on the ratio of remaining capacity to item size\n    capacity_ratio = feasible_bins / item\n    \n    # Apply a logarithmic scaling factor to reduce the influence of large capacities\n    log_factor = np.log(feasible_bins + 1)\n    \n    # Penalize bins that are nearing maximum capacity\n    penalty_factor = 1 / (feasible_bins - item + 1)\n    \n    # Combine all factors to calculate final scores\n    scores = capacity_ratio * log_factor * penalty_factor\n    \n    return scores",
+          "objective": 0.04216,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm calculates scores for each bin based on the ratio of the remaining capacity to the item's size, combined with a penalty for bins that are nearing their maximum capacity and a bonus for the least utilized bins.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate the score based on the ratio of remaining capacity to item size\n    score_ratios = feasible_bins / item\n    \n    # Apply a penalty for bins approaching maximum capacity\n    capacity_penalty = (1 - feasible_bins / np.max(bins))\n    score_ratios *= capacity_penalty\n    \n    # Apply a bonus for underutilized bins (lower remaining capacity)\n    utilization_bonus = 1 / (feasible_bins + 1)  # Adding 1 to avoid division by zero\n    scores = score_ratios * utilization_bonus\n    \n    return scores",
+          "objective": 0.04226,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm calculates scores for each bin based on the inverse of the sum of the remaining capacity and the item's size, combined with a weight that emphasizes the most underutilized bins, discouraging the use of bins that are nearing their maximum capacity.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate the score based on the inverse of the sum of remaining capacity \n    # and item size to prioritize bins that can accommodate the item efficiently\n    scores = 1 / (feasible_bins + item)\n    \n    # Apply a weight to the score based on remaining capacity to emphasize underutilized bins\n    weight_factor = 1 / feasible_bins\n    scores *= weight_factor\n    \n    return scores",
+          "objective": 0.04236,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm computes scores for each bin using a combination of the remaining capacity-to-item ratio, a penalty for overflow potential, and a dynamic weighting based on average utilization of all bins.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n\n    # Calculate the score based on the ratio of remaining capacity to item size\n    score_ratios = feasible_bins / item\n    \n    # Apply a penalty for bins with small remaining capacity (potential overflow)\n    overflow_penalty = 1 - (feasible_bins / np.max(bins))**2\n    score_ratios *= overflow_penalty\n    \n    # Calculate average remaining capacity for utilization scaling\n    average_capacity = np.mean(bins)\n    utilization_weight = average_capacity / (feasible_bins + 1)  # Adding 1 to avoid division by zero\n    scores = score_ratios * utilization_weight\n    \n    return scores",
+          "objective": 0.04286,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm prioritizes feasible bins using a weighted combination of their inverse capacity-to-item-size ratio, an exponential penalty for bins nearing full capacity, and a dynamic adjustment based on the ratio of the item size to the average bin capacity.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # {The new algorithm prioritizes feasible bins using a weighted combination of their inverse capacity-to-item-size ratio, an exponential penalty for bins nearing full capacity, and a dynamic adjustment based on the ratio of the item size to the average bin capacity.}\n\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate the inverse capacity-to-item-size ratio\n    inverse_capacity_ratio = item / feasible_bins\n    \n    # Apply an exponential penalty for bins nearing full capacity\n    exponential_penalty = np.exp(-(bins.max() - feasible_bins) / (bins.max() - item))\n    \n    # Calculate the average capacity of the feasible bins for dynamic scaling\n    average_bin_capacity = np.mean(feasible_bins)\n    dynamic_adjustment = np.where(feasible_bins < average_bin_capacity, 1.5, 1.0)\n\n    # Calculate final scores combining all components\n    scores = inverse_capacity_ratio * exponential_penalty * dynamic_adjustment\n    \n    return scores",
+          "objective": 0.04306,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm leverages a multi-faceted scoring mechanism that combines a weighted geometric mean of available bin capacity, an exponential decay function to penalize bins nearing capacity, and an adaptive scaling factor based on the ratio of the item's size to the average bin size.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # {The new algorithm leverages a multi-faceted scoring mechanism that combines a weighted geometric mean of available bin capacity, an exponential decay function to penalize bins nearing capacity, and an adaptive scaling factor based on the ratio of the item's size to the average bin size.}\n    \n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate the remaining capacity for feasible bins\n    remaining_capacity = feasible_bins - item\n\n    # Calculate the weighted geometric mean of the available bin capacities\n    geometric_mean = np.sqrt(np.prod(remaining_capacity))\n    \n    # Apply an exponential decay penalty for bins with low remaining capacity\n    decay_penalty = np.exp(-remaining_capacity / (bins.max() - item + 1e-10))\n    \n    # Calculate the average bin size for adaptive scaling\n    average_bin_size = np.mean(bins)\n    scaling_factor = average_bin_size / item\n    \n    # Final scores combining all components\n    scores = geometric_mean * decay_penalty * scaling_factor\n    \n    return scores",
+          "objective": 0.04326,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm calculates scores for each bin by incorporating both the remaining capacity and the item's size using a logarithmic function, combined with an exponential decay factor based on the bin\u2019s utilization, to promote balanced usage of bins while minimizing the number of bins utilized.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate score using a combination of logarithmic and exponential decay functions\n    log_term = np.log(feasible_bins + item)\n    utilization_factor = np.exp(-feasible_bins / np.max(feasible_bins))\n    \n    scores = log_term * utilization_factor\n    \n    return scores",
+          "objective": 0.04357,
+          "other_inf": null
+     },
+     {
+          "algorithm": "The new algorithm scores bins based on a combination of the square root of the remaining capacity adjusted for the item's size, a linear decay factor for bins nearing capacity, and a multiplicative factor for bins that have previously been used less frequently.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    # Filter out bins that are not feasible\n    feasible_bins = bins[bins > item]\n    \n    # Calculate adjusted remaining capacity\n    adjusted_capacity = feasible_bins - item\n    \n    # Calculate the square root of the remaining capacity to emphasize larger available space\n    sqrt_remaining_capacity = np.sqrt(adjusted_capacity)\n    \n    # Apply a linear decay penalty for bins approaching capacity\n    linear_decay_penalty = 1 - (adjusted_capacity / bins.max())\n    \n    # Introduce a frequency factor to elevate under-utilized bins\n    frequency_factor = 1.0 / (0.1 + np.log(feasible_bins / item))\n    \n    # Calculate final scores combining all components\n    scores = sqrt_remaining_capacity * linear_decay_penalty * frequency_factor\n    \n    return scores",
+          "objective": 0.04507,
+          "other_inf": null
+     }
+]

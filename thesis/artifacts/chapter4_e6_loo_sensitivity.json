@@ -1,0 +1,553 @@
+{
+  "design_doc": "thesis/writing/chapter4_robustness_analyses_design.md (E6)",
+  "metric": "delta_step_cumulative(5) per validation trajectory",
+  "tables": {
+    "table_4_4_chapter5_validation": {
+      "n_cells": 3,
+      "cells": [
+        {
+          "cell_id": "stratified_representative_L1_k4",
+          "label": "stratified_representative @ L1 @ k=4 (chapter 5 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            4.2000000000000455,
+            14.200000000000045,
+            2.966666666666697
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 7.122222222222263,
+          "median": 4.2000000000000455,
+          "loo_means": [
+            8.583333333333371,
+            3.5833333333333712,
+            9.200000000000045
+          ],
+          "loo_range": [
+            3.5833333333333712,
+            9.200000000000045
+          ],
+          "most_influential_trajectory_index": 1,
+          "most_influential_trajectory_id": "trajectory_1",
+          "most_influential_delta_from_mean": 3.5388888888888914,
+          "original_rank_by_mean": 0,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "uniform_random_L1_k4",
+          "label": "uniform_random @ L1 @ k=4 (chapter 5 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            0.0,
+            7.5,
+            0.0
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 2.5,
+          "median": 0.0,
+          "loo_means": [
+            3.75,
+            0.0,
+            3.75
+          ],
+          "loo_range": [
+            0.0,
+            3.75
+          ],
+          "most_influential_trajectory_index": 1,
+          "most_influential_trajectory_id": "trajectory_1",
+          "most_influential_delta_from_mean": 2.5,
+          "original_rank_by_mean": 2,
+          "ranking_stable": true
+        },
+        {
+          "cell_id": "worst_plus_best_L1_k4",
+          "label": "worst_plus_best @ L1 @ k=4 (chapter 5 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            6.300000000000182,
+            3.6000000000001364,
+            3.0333333333335304
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 4.311111111111283,
+          "median": 3.6000000000001364,
+          "loo_means": [
+            3.3166666666668334,
+            4.666666666666856,
+            4.950000000000159
+          ],
+          "loo_range": [
+            3.3166666666668334,
+            4.950000000000159
+          ],
+          "most_influential_trajectory_index": 0,
+          "most_influential_trajectory_id": "trajectory_0",
+          "most_influential_delta_from_mean": 0.9944444444444498,
+          "original_rank_by_mean": 1,
+          "ranking_stable": true
+        }
+      ]
+    },
+    "table_4_10_chapter7_validation": {
+      "n_cells": 14,
+      "cells": [
+        {
+          "cell_id": "stratified_representative_L1_k1",
+          "label": "CH7-01: stratified_representative @ L1 @ k=1 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            0.0,
+            13.833333333333485,
+            10.0
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 7.944444444444495,
+          "median": 10.0,
+          "loo_means": [
+            11.916666666666742,
+            5.0,
+            6.9166666666667425
+          ],
+          "loo_range": [
+            5.0,
+            11.916666666666742
+          ],
+          "most_influential_trajectory_index": 0,
+          "most_influential_trajectory_id": "trajectory_0",
+          "most_influential_delta_from_mean": -3.972222222222247,
+          "original_rank_by_mean": 2,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "stratified_representative_L1_k2",
+          "label": "CH7-02: stratified_representative @ L1 @ k=2 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            0.6000000000001364,
+            0.0,
+            0.0
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 0.20000000000004547,
+          "median": 0.0,
+          "loo_means": [
+            0.0,
+            0.3000000000000682,
+            0.3000000000000682
+          ],
+          "loo_range": [
+            0.0,
+            0.3000000000000682
+          ],
+          "most_influential_trajectory_index": 0,
+          "most_influential_trajectory_id": "trajectory_0",
+          "most_influential_delta_from_mean": 0.20000000000004547,
+          "original_rank_by_mean": 13,
+          "ranking_stable": true
+        },
+        {
+          "cell_id": "stratified_representative_L1_k4",
+          "label": "CH7-03: stratified_representative @ L1 @ k=4 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            3.766666666666879,
+            10.0,
+            4.866666666666788
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 6.211111111111222,
+          "median": 4.866666666666788,
+          "loo_means": [
+            7.433333333333394,
+            4.316666666666833,
+            6.883333333333439
+          ],
+          "loo_range": [
+            4.316666666666833,
+            7.433333333333394
+          ],
+          "most_influential_trajectory_index": 1,
+          "most_influential_trajectory_id": "trajectory_1",
+          "most_influential_delta_from_mean": 1.8944444444443889,
+          "original_rank_by_mean": 4,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "stratified_representative_L1_k8",
+          "label": "CH7-04: stratified_representative @ L1 @ k=8 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            9.833333333333485,
+            2.7000000000000455,
+            0.0
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 4.177777777777844,
+          "median": 2.7000000000000455,
+          "loo_means": [
+            1.3500000000000227,
+            4.9166666666667425,
+            6.266666666666765
+          ],
+          "loo_range": [
+            1.3500000000000227,
+            6.266666666666765
+          ],
+          "most_influential_trajectory_index": 0,
+          "most_influential_trajectory_id": "trajectory_0",
+          "most_influential_delta_from_mean": 2.827777777777821,
+          "original_rank_by_mean": 9,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "worst_only_at_k1_L1_k1",
+          "label": "CH7-05: worst_only_at_k1 @ L1 @ k=1 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            0.0,
+            0.0,
+            2.7000000000000455
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 0.9000000000000151,
+          "median": 0.0,
+          "loo_means": [
+            1.3500000000000227,
+            1.3500000000000227,
+            0.0
+          ],
+          "loo_range": [
+            0.0,
+            1.3500000000000227
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": 0.9000000000000151,
+          "original_rank_by_mean": 12,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "worst_plus_best_L1_k2",
+          "label": "CH7-06: worst_plus_best @ L1 @ k=2 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            0.0,
+            2.966666666666697,
+            5.900000000000091
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 2.955555555555596,
+          "median": 2.966666666666697,
+          "loo_means": [
+            4.433333333333394,
+            2.9500000000000455,
+            1.4833333333333485
+          ],
+          "loo_range": [
+            1.4833333333333485,
+            4.433333333333394
+          ],
+          "most_influential_trajectory_index": 0,
+          "most_influential_trajectory_id": "trajectory_0",
+          "most_influential_delta_from_mean": -1.4777777777777978,
+          "original_rank_by_mean": 11,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "worst_plus_best_L1_k4",
+          "label": "CH7-07: worst_plus_best @ L1 @ k=4 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            4.0,
+            0.0,
+            9.833333333333485
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 4.611111111111161,
+          "median": 4.0,
+          "loo_means": [
+            4.9166666666667425,
+            6.9166666666667425,
+            2.0
+          ],
+          "loo_range": [
+            2.0,
+            6.9166666666667425
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": 2.6111111111111613,
+          "original_rank_by_mean": 7,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "worst_plus_best_L1_k8",
+          "label": "CH7-08: worst_plus_best @ L1 @ k=8 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            0.0,
+            5.7333333333333485,
+            12.53333333333353
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 6.08888888888896,
+          "median": 5.7333333333333485,
+          "loo_means": [
+            9.13333333333344,
+            6.266666666666765,
+            2.8666666666666742
+          ],
+          "loo_range": [
+            2.8666666666666742,
+            9.13333333333344
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": 3.2222222222222854,
+          "original_rank_by_mean": 5,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "stratified_representative_L2_k1",
+          "label": "CH7-09: stratified_representative @ L2 @ k=1 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            11.733333333333348,
+            8.900000000000091,
+            4.300000000000182
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 8.311111111111208,
+          "median": 8.900000000000091,
+          "loo_means": [
+            6.600000000000136,
+            8.016666666666765,
+            10.31666666666672
+          ],
+          "loo_range": [
+            6.600000000000136,
+            10.31666666666672
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": -2.005555555555512,
+          "original_rank_by_mean": 0,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "stratified_representative_L2_k2",
+          "label": "CH7-10: stratified_representative @ L2 @ k=2 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            2.966666666666697,
+            3.266666666666879,
+            7.5
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 4.577777777777858,
+          "median": 3.266666666666879,
+          "loo_means": [
+            5.383333333333439,
+            5.2333333333333485,
+            3.116666666666788
+          ],
+          "loo_range": [
+            3.116666666666788,
+            5.383333333333439
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": 1.4611111111110704,
+          "original_rank_by_mean": 8,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "stratified_representative_L2_k4",
+          "label": "CH7-11: stratified_representative @ L2 @ k=4 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            6.266666666666879,
+            5.7333333333333485,
+            7.066666666666833
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 6.355555555555687,
+          "median": 6.266666666666879,
+          "loo_means": [
+            6.400000000000091,
+            6.666666666666856,
+            6.000000000000114
+          ],
+          "loo_range": [
+            6.000000000000114,
+            6.666666666666856
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": 0.35555555555557294,
+          "original_rank_by_mean": 3,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "worst_only_at_k1_L2_k1",
+          "label": "CH7-12: worst_only_at_k1 @ L2 @ k=1 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            4.800000000000182,
+            4.7333333333333485,
+            0.0
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 3.1777777777778433,
+          "median": 4.7333333333333485,
+          "loo_means": [
+            2.3666666666666742,
+            2.400000000000091,
+            4.766666666666765
+          ],
+          "loo_range": [
+            2.3666666666666742,
+            4.766666666666765
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": -1.5888888888889219,
+          "original_rank_by_mean": 10,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "worst_plus_best_L2_k2",
+          "label": "CH7-13: worst_plus_best @ L2 @ k=2 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            8.400000000000091,
+            14.666666666666742,
+            1.466666666666697
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 8.177777777777843,
+          "median": 8.400000000000091,
+          "loo_means": [
+            8.06666666666672,
+            4.933333333333394,
+            11.533333333333417
+          ],
+          "loo_range": [
+            4.933333333333394,
+            11.533333333333417
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": -3.355555555555574,
+          "original_rank_by_mean": 1,
+          "ranking_stable": false
+        },
+        {
+          "cell_id": "worst_plus_best_L2_k4",
+          "label": "CH7-14: worst_plus_best @ L2 @ k=4 (chapter 7 validation)",
+          "n_trajectories": 3,
+          "trajectory_values": [
+            6.966666666666697,
+            6.7000000000000455,
+            2.7333333333333485
+          ],
+          "trajectory_ids": [
+            "trajectory_0",
+            "trajectory_1",
+            "trajectory_2"
+          ],
+          "mean": 5.466666666666697,
+          "median": 6.7000000000000455,
+          "loo_means": [
+            4.716666666666697,
+            4.850000000000023,
+            6.833333333333371
+          ],
+          "loo_range": [
+            4.716666666666697,
+            6.833333333333371
+          ],
+          "most_influential_trajectory_index": 2,
+          "most_influential_trajectory_id": "trajectory_2",
+          "most_influential_delta_from_mean": -1.3666666666666742,
+          "original_rank_by_mean": 6,
+          "ranking_stable": false
+        }
+      ]
+    }
+  },
+  "canonical_outlier_trajectory": {
+    "cell_id": "stratified_representative_L1_k4",
+    "trajectory_index": 1,
+    "value": 14.200000000000045,
+    "cell_mean_with": 7.122222222222263,
+    "cell_mean_without": 3.5833333333333712,
+    "leverage_bins": 3.5388888888888914
+  },
+  "n_cells_total": 17,
+  "n_cells_ranking_unstable": 14
+}

@@ -1,0 +1,55 @@
+{
+  "cells": [
+    {
+      "cell_id": "stratified_representative@L1",
+      "level": 1,
+      "n_attempted": 3,
+      "n_failed_per_label": {},
+      "n_skipped_existing": 2,
+      "n_succeeded": 3,
+      "output_dir": "C:\\Users\\pc omen\\Documents\\testingOriginalEoh\\thesis\\results\\chapter6_primary_batch_gemini",
+      "strategy_name": "stratified_representative"
+    },
+    {
+      "cell_id": "stratified_representative@L2",
+      "level": 2,
+      "n_attempted": 5,
+      "n_failed_per_label": {},
+      "n_skipped_existing": 0,
+      "n_succeeded": 5,
+      "output_dir": "C:\\Users\\pc omen\\Documents\\testingOriginalEoh\\thesis\\results\\chapter6_primary_batch_gemini",
+      "strategy_name": "stratified_representative"
+    },
+    {
+      "cell_id": "worst_plus_best@L1",
+      "level": 1,
+      "n_attempted": 5,
+      "n_failed_per_label": {},
+      "n_skipped_existing": 0,
+      "n_succeeded": 5,
+      "output_dir": "C:\\Users\\pc omen\\Documents\\testingOriginalEoh\\thesis\\results\\chapter6_primary_batch_gemini",
+      "strategy_name": "worst_plus_best"
+    },
+    {
+      "cell_id": "worst_plus_best@L2",
+      "level": 2,
+      "n_attempted": 5,
+      "n_failed_per_label": {},
+      "n_skipped_existing": 0,
+      "n_succeeded": 5,
+      "output_dir": "C:\\Users\\pc omen\\Documents\\testingOriginalEoh\\thesis\\results\\chapter6_primary_batch_gemini",
+      "strategy_name": "worst_plus_best"
+    }
+  ],
+  "finished_at": "2026-04-25T04:58:00.224038+00:00",
+  "output_dir": "C:\\Users\\pc omen\\Documents\\testingOriginalEoh\\thesis\\results\\chapter6_primary_batch_gemini",
+  "settings": {
+    "inter_call_sleep_seconds": 3.0,
+    "max_output_tokens": 32768,
+    "n_proposals_per_cell": 5,
+    "provider": "gemini",
+    "reasoning_effort": "medium",
+    "timeout_seconds": 300.0
+  },
+  "started_at": "2026-04-25T03:52:51.838005+00:00"
+}

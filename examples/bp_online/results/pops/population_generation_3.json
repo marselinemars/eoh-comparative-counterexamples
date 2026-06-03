@@ -1,0 +1,26 @@
+[
+     {
+          "algorithm": "This algorithm computes a score by non-linearly interpolating between a best-fit potential and a harmonic-resonance potential using a sigmoid weight derived from the item's relative fill factor.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 0.5\n    beta = 20.0\n    gamma = 8.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    rem_space = bins - item_float\n    \n    harmonic_ratio = rem_space / (item_float + epsilon)\n    \n    potential_bf = np.exp(-alpha * harmonic_ratio)\n\n    disharmony_sq = np.power(harmonic_ratio - np.round(harmonic_ratio), 2)\n    potential_h = np.exp(-beta * disharmony_sq)\n\n    fill_factor = item_float / (bins + epsilon)\n    mixer_weight = 1.0 / (1.0 + np.exp(-gamma * (fill_factor - 0.5)))\n    \n    scores = (1.0 - mixer_weight) * potential_bf + mixer_weight * potential_h\n    \n    return scores\n",
+          "objective": 0.02485,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm computes a score by multiplicatively combining a best-fit potential based on an inverse-distance function and a harmonic-resonance potential based on a cosine function, using weights derived linearly from the item's relative fill factor.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 0.8\n    beta = 10.0\n    epsilon = 1e-9\n\n    item_float = float(item)\n    \n    rem_space = bins - item_float\n    \n    potential_bf = 1.0 / (1.0 + alpha * rem_space)\n    \n    harmonic_ratio = rem_space / (item_float + epsilon)\n    cosine_term = (np.cos(2.0 * np.pi * harmonic_ratio) + 1.0) / 2.0\n    potential_gr = np.power(cosine_term, beta)\n    \n    fill_factor = item_float / (bins + epsilon)\n    weight_gr = fill_factor\n    weight_bf = 1.0 - weight_gr\n    \n    scores = np.power(potential_bf, weight_bf) * np.power(potential_gr, weight_gr)\n    \n    return scores\n",
+          "objective": 0.02696,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm scores bins by combining a power-law term that favors high fill factors with an exponential sine-squared potential that rewards residual capacities harmonic with the item size.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    gamma = 0.5\n    beta = 4.0\n    \n    fill_factor = item_float / (bins + epsilon)\n    best_fit_term = np.power(fill_factor, gamma)\n    \n    remaining_space = bins - item_float\n    rem_ratio = remaining_space / (item_float + epsilon)\n    \n    harmonic_potential = np.sin(np.pi * rem_ratio)\n    harmonic_term = np.exp(-beta * np.power(harmonic_potential, 2))\n    \n    scores = best_fit_term * harmonic_term\n    \n    return scores\n",
+          "objective": 0.02817,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm scores bins using a weighted sum of a fill-factor term and a tight-fit term, modulated by a periodic Gaussian-like function to favor harmonically divisible remaining spaces.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 1.5\n    beta = 1.0\n    gamma = 5.0\n    epsilon = 1e-9\n    item_float = float(item)\n    remaining_space = bins - item_float\n    primary_term = alpha * (item_float / bins) + beta / (1.0 + remaining_space)\n    harmonic_ratio = remaining_space / (item_float + epsilon)\n    modulating_term = np.exp(-gamma * np.power(np.sin(np.pi * harmonic_ratio), 2))\n    scores = primary_term * modulating_term\n    return scores\n",
+          "objective": 0.02978,
+          "other_inf": null
+     }
+]

@@ -1,0 +1,16 @@
+    decision_trace:
+      The rows below are a representative sample of the decisions
+      the incumbent makes on this instance, in arrival order: the
+      first 12 decisions as they happen, then an even stride
+      across the remaining decisions through the end of the
+      instance (60 rows total from 5000 actual decisions). Each
+      row shows the arrival index, the item size, the remaining
+      capacities of the incumbent's open bins at that moment
+      (listed in creation order), which bin the incumbent chose
+      (0-based index into that list, or "new" if it opened a new
+      bin), the score at the chosen bin, the score at the
+      runner-up bin, their difference (margin), the chosen bin's
+      remaining capacity after the item was packed, and whether
+      this decision opened a new bin.
+
+      <rendered_decision_trace_rows>

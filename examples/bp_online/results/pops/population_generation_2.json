@@ -1,0 +1,26 @@
+[
+     {
+          "algorithm": "This algorithm scores bins using a weighted sum of a fill-factor term and a tight-fit term, modulated by a periodic Gaussian-like function to favor harmonically divisible remaining spaces.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    alpha = 1.5\n    beta = 1.0\n    gamma = 5.0\n    epsilon = 1e-9\n    item_float = float(item)\n    remaining_space = bins - item_float\n    primary_term = alpha * (item_float / bins) + beta / (1.0 + remaining_space)\n    harmonic_ratio = remaining_space / (item_float + epsilon)\n    modulating_term = np.exp(-gamma * np.power(np.sin(np.pi * harmonic_ratio), 2))\n    scores = primary_term * modulating_term\n    return scores\n",
+          "objective": 0.02978,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm scores bins using the product of a logarithmic potential function that aggressively rewards tight fits and a custom periodic function that incentivizes leaving a remaining space divisible by the item size.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    gamma = 2.5\n    delta = 0.5\n    \n    remaining_space = bins - item_float\n    \n    log_potential_term = np.log(1.0 + item_float / (remaining_space + epsilon))\n    \n    harmonic_ratio = remaining_space / (item_float + epsilon)\n    phase = np.pi * harmonic_ratio\n    \n    periodic_incentive_term = (1.0 + np.cos(2 * phase)) * np.exp(-gamma * np.power(np.sin(phase), 2))\n    \n    fill_ratio = item_float / (bins + epsilon)\n    hyperbolic_fill_term = np.tanh(delta * fill_ratio)\n    \n    scores = log_potential_term * periodic_incentive_term * hyperbolic_fill_term\n    \n    return scores\n",
+          "objective": 0.03602,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm scores bins using a product of a Gaussian potential on relative waste to reward fuller bins and a powered cosine term to sharply incentivize harmonic residual capacities.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    alpha = 5.0\n    mu = 2.0\n    \n    remaining_space = bins - item_float\n    \n    relative_waste = remaining_space / (bins + epsilon)\n    gaussian_fill_term = np.exp(-alpha * np.power(relative_waste, 2))\n    \n    harmonic_ratio = remaining_space / (item_float + epsilon)\n    harmonic_incentive_term = np.power(np.cos(np.pi * harmonic_ratio), 2.0 * mu)\n    \n    scores = gaussian_fill_term * harmonic_incentive_term\n    \n    return scores\n",
+          "objective": 0.03632,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm scores bins by multiplying a Gaussian function that rewards capacities near integer multiples of the item size with a logistic decay function that penalizes excessive remaining space.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    alpha = 5.0\n    beta = 0.5\n    capacity_ratio = bins / (item_float + epsilon)\n    fractional_part = capacity_ratio - np.floor(capacity_ratio)\n    dist_to_integer = np.minimum(fractional_part, 1.0 - fractional_part)\n    gaussian_harmonic_term = np.exp(-alpha * dist_to_integer**2)\n    relative_waste = capacity_ratio - 1.0\n    logistic_waste_penalty = 2.0 / (1.0 + np.exp(beta * relative_waste))\n    scores = gaussian_harmonic_term * logistic_waste_penalty\n    return scores\n",
+          "objective": 0.03642,
+          "other_inf": null
+     }
+]

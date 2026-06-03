@@ -1,0 +1,26 @@
+[
+     {
+          "algorithm": "This algorithm scores bins by multiplying a Gaussian function that rewards capacities near integer multiples of the item size with a logistic decay function that penalizes excessive remaining space.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    alpha = 5.0\n    beta = 0.5\n    capacity_ratio = bins / (item_float + epsilon)\n    fractional_part = capacity_ratio - np.floor(capacity_ratio)\n    dist_to_integer = np.minimum(fractional_part, 1.0 - fractional_part)\n    gaussian_harmonic_term = np.exp(-alpha * dist_to_integer**2)\n    relative_waste = capacity_ratio - 1.0\n    logistic_waste_penalty = 2.0 / (1.0 + np.exp(beta * relative_waste))\n    scores = gaussian_harmonic_term * logistic_waste_penalty\n    return scores\n",
+          "objective": 0.03642,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm scores bins by combining a power-law potential function that favors tight fits with a cosine-based harmonic term that rewards leaving a remaining space divisible by the item size.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    alpha = 0.5\n    beta = 0.5\n    remaining_space = bins - item_float\n    potential_term = np.power(bins, alpha) - np.power(remaining_space, alpha)\n    harmonic_ratio = remaining_space / (item_float + epsilon)\n    harmonic_term = 1.0 + beta * np.cos(2 * np.pi * harmonic_ratio)\n    scores = potential_term * harmonic_term\n    return scores\n",
+          "objective": 0.03733,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm calculates bin scores by combining a harmonic resonance term, which favors bin capacities that are integer multiples of the item size, with an exponential decay penalty on the relative wasted space to promote tight fits.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    capacity_ratio = bins / (item_float + epsilon)\n    harmonic_term = 1.0 + np.cos(2 * np.pi * capacity_ratio)\n    relative_waste = (bins - item_float) / (item_float + epsilon)\n    waste_penalty = np.exp(-relative_waste)\n    scores = harmonic_term * waste_penalty\n    return scores\n",
+          "objective": 0.03743,
+          "other_inf": null
+     },
+     {
+          "algorithm": "This algorithm scores bins using a non-linear function that maximizes the squared fill ratio of the item in the bin while penalizing the resulting empty space relative to the item's size to find the tightest fit.",
+          "code": "import numpy as np\n\ndef score(item, bins):\n    item_float = float(item)\n    epsilon = 1e-9\n    fill_ratio_term = (item_float / bins) ** 2\n    waste_penalty_term = (bins - item_float) / (item_float + epsilon)\n    scores = fill_ratio_term - 0.5 * waste_penalty_term\n    return scores\n",
+          "objective": 0.03984,
+          "other_inf": null
+     }
+]
